@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/feed"
+        android:icon="@drawable/vector_feed"
+        android:title="Feed" />
+
+    <item
+        android:id="@+id/activity"
+        android:icon="@drawable/vector_activity"
+        android:title="Activity" />
+
+    <item
+        android:id="@+id/workout"
+        android:icon="@drawable/vector_workout"
+        android:title="Workout" />
+
+    <item
+        android:id="@+id/inbox"
+        android:icon="@drawable/vector_inbox"
+        android:title="Inbox" />
+
+</menu>
