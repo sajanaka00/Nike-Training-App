@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/animation"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="200dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="75dp"
+        android:background="@drawable/logo" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginRight="25dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/username"
+            android:hint="Phone number, username or email address"
+            android:padding="7.5dp"
+            android:textSize="14sp"
+            android:textColorHint="@color/colorWhite"
+            android:layout_height="50dp"
+            android:layout_width="match_parent"
+            android:background="@drawable/gradient_1"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/password"
+            android:hint="Password"
+            android:padding="7.5dp"
+            android:textSize="14sp"
+            android:layout_height="50dp"
+            android:layout_width="match_parent"
+            android:inputType="textPassword"
+            android:layout_marginTop="15dp"
+            android:textColorHint="@color/colorWhite"
+            android:background="@drawable/gradient_1" />
+
+        <EditText
+            android:id="@+id/forgetPassword"
+            android:hint="Forgotten password?"
+            android:padding="5dp"
+            android:textSize="14sp"
+            android:textColor="@color/colorAccent"
+            android:layout_height="45dp"
+            android:layout_width="match_parent"
+            android:paddingStart="162dp"
+            android:layout_marginTop="10px"
+            android:background="@drawable/layout" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="75px"
+            android:background="@drawable/gradient_2"
+            android:text="Log in"
+            android:textSize="16dp" />
+
+        <EditText
+            android:id="@+id/divider"
+            android:hint="------------------------------   OR   --------------------------------"
+            android:padding="5dp"
+            android:textSize="14sp"
+            android:textColor="@color/colorAccent"
+            android:layout_height="45dp"
+            android:layout_width="match_parent"
+            android:paddingStart="45dp"
+            android:layout_marginTop="30px"
+            android:background="@drawable/layout"/>
+
+    </LinearLayout>
+
+</LinearLayout>
