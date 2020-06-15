@@ -3,7 +3,13 @@
     <gradient
         android:startColor="@color/deep_purple_500"
         android:endColor="@color/purple_500"
-        android:angle="0"/>
+        android:angle="0" />
 
     <stroke android:color="@color/colorAccent" android:width="0.1sp" />
+
+    <corners
+        android:bottomRightRadius="5dp"
+        android:bottomLeftRadius="5dp"
+        android:topLeftRadius="5dp"
+        android:topRightRadius="5dp"/>
 </shape>

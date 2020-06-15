@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.sign_in);
+        setContentView(R.layout.feed);
 
         BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
@@ -31,6 +31,9 @@ public class MainActivity extends AppCompatActivity {
             switch (menuItem.getItemId()) {
                 case R.id.feed:
                     selectedFragment = new FeedFragment();
+                    break;
+                case R.id.activity:
+                    selectedFragment = new ActivityFragment();
                     break;
                 case R.id.inbox:
                     selectedFragment = new InboxFragment();

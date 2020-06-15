@@ -30,55 +30,80 @@
             android:padding="7.5dp"
             android:textSize="14sp"
             android:textColorHint="@color/colorWhite"
-            android:layout_height="50dp"
+            android:layout_height="45dp"
             android:layout_width="match_parent"
             android:background="@drawable/gradient_1"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:fontFamily="@font/ptsans_regular" />
 
         <EditText
             android:id="@+id/password"
             android:hint="Password"
             android:padding="7.5dp"
             android:textSize="14sp"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
             android:layout_width="match_parent"
             android:inputType="textPassword"
             android:layout_marginTop="15dp"
             android:textColorHint="@color/colorWhite"
-            android:background="@drawable/gradient_1" />
+            android:background="@drawable/gradient_1"
+            android:fontFamily="@font/ptsans_regular" />
 
         <EditText
             android:id="@+id/forgetPassword"
             android:hint="Forgotten password?"
             android:padding="5dp"
             android:textSize="14sp"
-            android:textColor="@color/colorAccent"
-            android:layout_height="45dp"
+            android:textColorHint="@color/light_blue_500"
+            android:layout_height="40dp"
             android:layout_width="match_parent"
-            android:paddingStart="162dp"
+            android:textAlignment="textEnd"
             android:layout_marginTop="10px"
-            android:background="@drawable/layout" />
+            android:background="@drawable/layout"
+            android:fontFamily="@font/ptsans_regular" />
 
         <Button
             android:id="@+id/button"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="45dp"
             android:layout_marginTop="75px"
             android:background="@drawable/gradient_2"
             android:text="Log in"
-            android:textSize="16dp" />
+            android:textSize="16dp"
+            android:fontFamily="@font/ptsans_regular" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
 
         <EditText
             android:id="@+id/divider"
-            android:hint="------------------------------   OR   --------------------------------"
-            android:padding="5dp"
+            android:hint="OR"
+            android:textAlignment="center"
             android:textSize="14sp"
-            android:textColor="@color/colorAccent"
+            android:textColorHint="@color/colorBlack"
             android:layout_height="45dp"
             android:layout_width="match_parent"
-            android:paddingStart="45dp"
-            android:layout_marginTop="30px"
-            android:background="@drawable/layout"/>
+            android:layout_marginTop="10dp"
+            android:background="@drawable/layout"
+            android:fontFamily="@font/ptsans_regular" />
+
+        <EditText
+            android:id="@+id/facebook"
+            android:hint="Continue as Nivin Sajanaka"
+            android:textAlignment="center"
+            android:textSize="14sp"
+            android:textColorHint="@color/light_blue_500"
+            android:layout_height="45dp"
+            android:layout_width="match_parent"
+            android:background="@drawable/layout"
+            android:fontFamily="@font/ptsans_regular" />
 
     </LinearLayout>
 
