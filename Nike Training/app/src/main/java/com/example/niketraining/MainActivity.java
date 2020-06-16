@@ -9,17 +9,19 @@ import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import fragments.FeedFragment;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.feed);
+        setContentView(R.layout.activity_main);
 
         BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FeedFragment()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.container, new FeedFragment()).commit();
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener navListener =
@@ -32,12 +34,12 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.feed:
                     selectedFragment = new FeedFragment();
                     break;
-                case R.id.activity:
-                    selectedFragment = new ActivityFragment();
-                    break;
-                case R.id.inbox:
-                    selectedFragment = new InboxFragment();
-                    break;
+                //case R.id.activity:
+                    //selectedFragment = new ActivityFragment();
+                    //break;
+                //case R.id.inbox:
+                    //selectedFragment = new InboxFragment();
+                    //break;
             }
 
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
