@@ -50,8 +50,6 @@
             android:textColor="@color/black"
             android:textSize="25sp" />
 
-        <include layout="@layout/app_bar" />
-
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabLayout"
             android:layout_width="match_parent"
