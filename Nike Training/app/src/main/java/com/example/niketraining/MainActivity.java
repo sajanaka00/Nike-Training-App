@@ -9,7 +9,10 @@ import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import fragments.ActivityFragment;
 import fragments.FeedFragment;
+import fragments.InboxFragment;
+import fragments.WorkoutFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -34,15 +37,18 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.feed:
                     selectedFragment = new FeedFragment();
                     break;
-                //case R.id.activity:
-                    //selectedFragment = new ActivityFragment();
-                    //break;
-                //case R.id.inbox:
-                    //selectedFragment = new InboxFragment();
-                    //break;
+                case R.id.activity:
+                    selectedFragment = new ActivityFragment();
+                    break;
+                case R.id.workout:
+                    selectedFragment = new WorkoutFragment();
+                    break;
+                case R.id.inbox:
+                    selectedFragment = new InboxFragment();
+                    break;
             }
 
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.container, selectedFragment).commit();
 
             return true;
         }

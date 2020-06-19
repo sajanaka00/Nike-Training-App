@@ -23,13 +23,13 @@
             android:background="@drawable/user_img" />
 
         <TextView
-            android:id="@+id/feedLabel"
+            android:id="@+id/inboxLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginStart="20dp"
             android:padding="5dp"
-            android:text="Feed"
+            android:text="Inbox"
             android:textSize="25sp"
             android:textColor="@color/black"
             android:fontFamily="@font/ptsans_regular" />
@@ -37,18 +37,19 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/inboxLabel"
             android:orientation="vertical"
             android:background="@color/grey"
             android:gravity="center_horizontal" >
 
             <EditText
-                android:id="@+id/contentBold"
+                android:id="@+id/contentDark"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="115dp"
+                android:layout_marginTop="170dp"
                 android:textSize="18sp"
-                android:hint="NO NEW STORIES"
+                android:hint="NO MESSAGES YET"
                 android:textAlignment="center"
                 android:textColorHint="@color/black"
                 android:background="@drawable/content_border"
@@ -58,27 +59,15 @@
                 android:id="@+id/contentLight"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="25dp"
-                android:layout_marginRight="25dp"
-                android:hint="Find and connect with friends to see what they’re up to and cheer each other on during runs and workouts."
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp"
+                android:hint="Messages and notifications from Nike will show up here."
                 android:textSize="14sp"
                 android:textAlignment="center"
                 android:lineSpacingExtra="3sp"
                 android:textColorHint="@color/black"
                 android:background="@drawable/content_border"
                 android:fontFamily="@font/notosansjp_light" />
-
-            <Button
-                android:id="@+id/button"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="75dp"
-                android:layout_marginLeft="40dp"
-                android:layout_marginRight="40dp"
-                android:text="ADD FRIENDS"
-                android:textColor="#FFFFFF"
-                android:textSize="16sp"
-                android:background="@color/black" />
 
         </LinearLayout>
 

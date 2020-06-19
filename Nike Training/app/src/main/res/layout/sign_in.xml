@@ -53,7 +53,7 @@
             android:inputType="textPersonName"
             android:padding="7.5dp"
             android:textSize="16sp"
-            android:background="@drawable/border"
+            android:background="@drawable/content_border"
             android:textColorHint="@color/darkGrey" />
 
         <EditText
@@ -65,7 +65,7 @@
             android:inputType="textPassword"
             android:padding="7.5dp"
             android:textSize="16sp"
-            android:background="@drawable/border"
+            android:background="@drawable/content_border"
             android:textColorHint="@color/darkGrey" />
 
         <EditText
@@ -77,7 +77,7 @@
             android:layout_width="match_parent"
             android:paddingStart="130dp"
             android:layout_marginTop="10px"
-            android:background="@drawable/border_link" />
+            android:background="@drawable/content_border" />
 
         <EditText
             android:id="@+id/termsAndConditions"
@@ -85,7 +85,7 @@
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:layout_marginTop="25px"
-            android:background="@drawable/border_link"
+            android:background="@drawable/content_border"
             android:hint="By logging in, you agree to Nike's Privacy Policy and Terms of Use."
             android:lineSpacingExtra="5sp"
             android:padding="5dp"
@@ -109,7 +109,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="35px"
-            android:background="@drawable/border_link"
+            android:background="@drawable/content_border"
             android:hint="Not a member? Join Us."
             android:padding="5dp"
             android:textAlignment="center"

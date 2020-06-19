@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/user"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/user_img" />
+
+        <ImageView
+            android:id="@+id/add"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="end"
+            android:layout_marginEnd="25dp"
+            android:layout_marginTop="-40dp"
+            android:background="@drawable/vector_add" />
+
+        <TextView
+            android:id="@+id/activityLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:padding="5dp"
+            android:text="Activity"
+            android:textSize="25sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/ptsans_regular" />
+
+        <TextView
+            android:id="@+id/historyLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:text="History"
+            android:padding="5dp"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/ptsans_regular" />
+
+        <TextView
+            android:id="@+id/achievementsLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="-30dp"
+            android:text="Achievements"
+            android:padding="5dp"
+            android:textSize="16sp"
+            android:fontFamily="@font/ptsans_regular" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="-10dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" />
+
+    </LinearLayout>
+
+</RelativeLayout>
