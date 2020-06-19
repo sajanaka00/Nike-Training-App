@@ -9,10 +9,10 @@ import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-import fragments.ActivityFragment;
-import fragments.FeedFragment;
-import fragments.InboxFragment;
-import fragments.WorkoutFragment;
+import com.example.niketraining.fragments.ActivityFragment;
+import com.example.niketraining.fragments.FeedFragment;
+import com.example.niketraining.fragments.InboxFragment;
+import com.example.niketraining.fragments.WorkoutFragment;
 
 public class MainActivity extends AppCompatActivity {
 
