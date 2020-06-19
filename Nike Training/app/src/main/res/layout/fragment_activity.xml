@@ -12,7 +12,6 @@
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="100dp"
         android:orientation="vertical">
 
         <RelativeLayout
@@ -25,7 +24,7 @@
                 android:id="@+id/user"
                 android:layout_width="45dp"
                 android:layout_height="45dp"
-                android:layout_marginLeft="30dp"
+                android:layout_marginLeft="25dp"
                 android:src="@drawable/user_img" />
 
             <ImageView
@@ -36,49 +35,38 @@
                 android:layout_centerInParent="true"
                 android:layout_marginRight="30dp"
                 android:src="@drawable/vector_add" />
-        </RelativeLayout>
 
+        </RelativeLayout>
 
         <TextView
             android:id="@+id/activityLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:fontFamily="@font/ptsans_regular"
             android:padding="5dp"
             android:text="Activity"
             android:textColor="@color/black"
             android:textSize="25sp" />
 
-        <TextView
-            android:id="@+id/historyLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="5dp"
-            android:fontFamily="@font/ptsans_regular"
-            android:padding="5dp"
-            android:text="History"
-            android:textColor="@color/black"
-            android:textSize="16sp" />
+        <include layout="@layout/app_bar" />
 
-        <TextView
-            android:id="@+id/achievementsLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="100dp"
-            android:layout_marginTop="-30dp"
-            android:fontFamily="@font/ptsans_regular"
-            android:padding="5dp"
-            android:text="Achievements"
-            android:textSize="16sp" />
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </com.google.android.material.tabs.TabLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="-10dp"
             android:gravity="center_horizontal"
             android:orientation="vertical" />
 
