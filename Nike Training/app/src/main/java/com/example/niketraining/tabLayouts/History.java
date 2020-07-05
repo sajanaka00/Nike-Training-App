@@ -21,7 +21,7 @@ public class History extends Fragment {
     private View view;
 
     ListData[] listData = new ListData[] {
-            new ListData("Runner Cool Down \n Fri, 19 Apr \t  1:15", R.drawable.history_1),
+            new ListData("Runner Cool Down \n Fri, 19 Apr \t  1:15", R.drawable.history_1,"START UP"),
     };
 
     @Override

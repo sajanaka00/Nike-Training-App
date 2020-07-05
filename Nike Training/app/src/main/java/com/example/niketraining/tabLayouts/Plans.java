@@ -21,10 +21,10 @@ public class Plans extends Fragment {
     private View view;
 
     ListData[] listData = new ListData[] {
-            new ListData("START UP \n Kick it off with four weeks of guided, well-balanced workouts to get you fit", R.drawable.plan_1),
-            new ListData("LEAN FIT \n Get lean and fit over six weeks with a balanced plan that builds endurance", R.drawable.history),
-            new ListData("BODYWEIGHT ONLY \n Push your strength and improve muscle tone over four weeks-all without weights", R.drawable.history),
-            new ListData("GYM STRONG \n Build full-body strength with a focus on weight training over 8 weeks", R.drawable.history),
+            new ListData("Kick it off with four weeks of guided, well-balanced workouts to get you fit", R.drawable.plan_1,"START UP"),
+            new ListData("Get lean and fit over six weeks with a balanced plan that builds endurance", R.drawable.history,"LEAN FIT"),
+            new ListData("Push your strength and improve muscle tone over four weeks-all without weights", R.drawable.history,"BODYWEIGHT ONLY "),
+            new ListData("Build full-body strength with a focus on weight training over 8 weeks", R.drawable.history,"GYM STRONG"),
     };
 
     @Override

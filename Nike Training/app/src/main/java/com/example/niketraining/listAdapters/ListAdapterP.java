@@ -36,7 +36,9 @@ public class ListAdapterP extends RecyclerView.Adapter<ListAdapterP.ViewHolder> 
     public void onBindViewHolder(ViewHolder holder, int position) {
 
         final ListData myListData = listdata[position];
-        holder.text.setText(listdata[position].getDescription());
+        holder.title.setText(listdata[position].getTitle());
+        holder.description.setText(listdata[position].getDescription());
+
         holder.image.setImageResource(listdata[position].getImgId());
 
         holder.relativeLayout.setOnClickListener(new View.OnClickListener() {
@@ -54,13 +56,16 @@ public class ListAdapterP extends RecyclerView.Adapter<ListAdapterP.ViewHolder> 
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         public ImageView image;
-        public TextView text;
+        public TextView title;
+        public TextView description;
+
         public RelativeLayout relativeLayout;
 
         public ViewHolder(View itemView) {
             super(itemView);
             this.image = (ImageView) itemView.findViewById(R.id.image);
-            this.text = (TextView) itemView.findViewById(R.id.text);
+            this.title = (TextView) itemView.findViewById(R.id.titleTextView);
+            this.description = (TextView) itemView.findViewById(R.id.descriptionTextView);
             relativeLayout = (RelativeLayout)itemView.findViewById(R.id.relativeLayoutP);
         }
     }

@@ -2,12 +2,14 @@ package com.example.niketraining;
 
 public class ListData {
 
+    private String title;
     private String description;
     private int imgId;
 
-    public ListData(String description, int imgId) {
+    public ListData(String description, int imgId, String title) {
         this.description = description;
         this.imgId = imgId;
+        this.title = title;
     }
 
     public String getDescription() {
@@ -26,4 +28,11 @@ public class ListData {
         this.imgId = imgId;
     }
 
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
 }
