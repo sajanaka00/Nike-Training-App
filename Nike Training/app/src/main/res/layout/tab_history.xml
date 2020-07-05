@@ -1,13 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="Tab 1"
-        android:textSize="36sp" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-</RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical"
+            tools:context=".tabLayouts.History">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="1"
+                android:textSize="36sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/anton_regular"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="60dp"
+                android:text="Total Workouts"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="105dp"
+                android:text="1"
+                android:textSize="13sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/anton_regular"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="130dp"
+                android:text="Total Minutes"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/horLine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="175dp"
+                android:background="@drawable/line"/>
+
+            <RelativeLayout
+                android:id="@+id/ntcLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/horLine"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="20dp"
+                    android:text="NTC Activity"
+                    android:gravity="left"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/ptsans_regular"
+                    tools:ignore="RtlHardcoded" />
+
+                <ImageView
+                    android:id="@+id/doubleLine"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/vector_double_line" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/horLine2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ntcLabel"
+                android:background="@drawable/line"/>
+
+            <TextView
+                android:id="@+id/year"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/horLine2"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="April 2019"
+                android:textColor="@color/black"
+                android:fontFamily="@font/archivo_narrow_regular"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewH"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="25dp"
+                android:layout_below="@+id/year"
+                android:orientation="vertical"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">NikeTraining</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="contentLight_feed">Find and connect with friends to see what they’re up to and cheer each other on during runs and workouts.</string>
+    <string name="contentLight_inbox">Messages and notifications from Nike will show up here.</string>
+    <string name="contentLight_plan">Start training with a personal plan that guides you whilst adjusting to your progress, schedule and other activities.</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

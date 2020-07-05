@@ -1,4 +1,4 @@
-package com.example.niketraining.fragments;
+package com.example.niketraining.tabLayouts;
 
 import android.os.Bundle;
 
@@ -10,12 +10,12 @@ import android.view.ViewGroup;
 
 import com.example.niketraining.R;
 
-public class HistoryTab extends Fragment {
+public class Achievements extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.tab_history, container, false);
+        return inflater.inflate(R.layout.tab_achievements, container, false);
     }
 
 }

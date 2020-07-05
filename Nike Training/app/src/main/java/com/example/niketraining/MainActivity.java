@@ -3,29 +3,23 @@ package com.example.niketraining;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
 import android.view.MenuItem;
 
-import com.example.niketraining.fragments.HistoryTab;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import com.example.niketraining.fragments.ActivityFragment;
 import com.example.niketraining.fragments.FeedFragment;
 import com.example.niketraining.fragments.InboxFragment;
 import com.example.niketraining.fragments.WorkoutFragment;
-import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity {
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
 
         BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
         bottomNav.setOnNavigationItemSelectedListener(navListener);

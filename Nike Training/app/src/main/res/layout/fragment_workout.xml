@@ -16,15 +16,15 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:layout_marginTop="25dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="15dp"
             android:orientation="horizontal" >
 
             <ImageView
                 android:id="@+id/user"
-                android:layout_width="45dp"
-                android:layout_height="45dp"
-                android:layout_marginLeft="25dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="15dp"
                 android:src="@drawable/user_img" />
 
             <ImageView
@@ -33,7 +33,7 @@
                 android:layout_height="30dp"
                 android:layout_alignParentEnd="true"
                 android:layout_centerInParent="true"
-                android:layout_marginRight="30dp"
+                android:layout_marginRight="15dp"
                 android:background="@drawable/vector_bookmark" />
 
         </RelativeLayout>
@@ -42,8 +42,8 @@
             android:id="@+id/workoutLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
             android:padding="5dp"
             android:text="Workout"
             android:textSize="25sp"
@@ -51,36 +51,16 @@
             android:fontFamily="@font/ptsans_regular" />
 
         <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="For You" />
-
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Browse" />
-
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Collections" />
-
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Plans" />
-
         </com.google.android.material.tabs.TabLayout>
 
-        <LinearLayout
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center_horizontal"
-            android:orientation="vertical" />
+            android:layout_height="match_parent" />
 
     </LinearLayout>
 
