@@ -1,22 +1,14 @@
-package com.example.niketraining;
+package com.example.niketraining.listData;
 
-public class ListData {
+public class ListData_3args {
 
     private String title;
     private String description;
     private int imgId;
 
-    public ListData(String description, int imgId, String title) {
-        this.description = description;
+    public ListData_3args(String description, int imgId, String title) {
         this.imgId = imgId;
         this.title = title;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
         this.description = description;
     }
 
@@ -35,4 +27,13 @@ public class ListData {
     public void setTitle(String title) {
         this.title = title;
     }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
 }

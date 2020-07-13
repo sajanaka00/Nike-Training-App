@@ -10,30 +10,30 @@ import android.widget.Toast;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.niketraining.listData.ListData_3args;
 import com.example.niketraining.R;
+import com.example.niketraining.listData.ListData_3args;
 
-public class ListAdapterP extends RecyclerView.Adapter<ListAdapterP.ViewHolder> {
+public class ListAdapterC extends RecyclerView.Adapter<ListAdapterC.ViewHolder> {
 
     private ListData_3args[] listdata;
 
     // RecyclerView recyclerView;
-    public ListAdapterP(ListData_3args[] listdata) {
+    public ListAdapterC(ListData_3args[] listdata) {
         this.listdata = listdata;
     }
 
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public ListAdapterC.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        View listItem = layoutInflater.inflate(R.layout.recycler_plans, parent, false);
-        ViewHolder viewHolder = new ViewHolder(listItem);
+        View listItem = layoutInflater.inflate(R.layout.recycler_collections, parent, false);
+        ListAdapterC.ViewHolder viewHolder = new ListAdapterC.ViewHolder(listItem);
 
         return viewHolder;
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(ListAdapterC.ViewHolder holder, int position) {
 
         final ListData_3args myListData3args = listdata[position];
         holder.title.setText(listdata[position].getTitle());
@@ -63,10 +63,10 @@ public class ListAdapterP extends RecyclerView.Adapter<ListAdapterP.ViewHolder> 
 
         public ViewHolder(View itemView) {
             super(itemView);
-            this.image = (ImageView) itemView.findViewById(R.id.imageP);
-            this.title = (TextView) itemView.findViewById(R.id.titleP);
-            this.description = (TextView) itemView.findViewById(R.id.descriptionP);
-            relativeLayout = (RelativeLayout)itemView.findViewById(R.id.relativeLayoutP);
+            this.image = (ImageView) itemView.findViewById(R.id.imageC);
+            this.title = (TextView) itemView.findViewById(R.id.titleC);
+            this.description = (TextView) itemView.findViewById(R.id.descriptionC);
+            relativeLayout = (RelativeLayout) itemView.findViewById(R.id.relativeLayoutC);
         }
     }
 

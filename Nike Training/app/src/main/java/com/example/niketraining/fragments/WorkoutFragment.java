@@ -11,9 +11,13 @@ import android.view.ViewGroup;
 
 import com.example.niketraining.R;
 import com.example.niketraining.TabAdapter;
-import com.example.niketraining.tabLayouts.Achievements;
-import com.example.niketraining.tabLayouts.Plans;
 import com.google.android.material.tabs.TabLayout;
+
+import com.example.niketraining.tabLayouts.Browse;
+import com.example.niketraining.tabLayouts.Collections;
+import com.example.niketraining.tabLayouts.ForYou;
+import com.example.niketraining.tabLayouts.Plans;
+
 
 public class WorkoutFragment extends Fragment {
 
@@ -30,9 +34,9 @@ public class WorkoutFragment extends Fragment {
         tabLayout = (TabLayout) view.findViewById(R.id.tabLayout);
         adapter = new TabAdapter(getActivity().getSupportFragmentManager());
 
-        adapter.addFragment(new Achievements(), "For You");
-        adapter.addFragment(new Achievements(), "Browse");
-        adapter.addFragment(new Achievements(), "Collections");
+        adapter.addFragment(new ForYou(), "For You");
+        adapter.addFragment(new Browse(), "Browse");
+        adapter.addFragment(new Collections(), "Collections");
         adapter.addFragment(new Plans(), "Plans");
 
         viewPager.setAdapter(adapter);
