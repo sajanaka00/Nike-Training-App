@@ -17,5 +17,4 @@ public class Achievements extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.tab_achievements, container, false);
     }
-
 }

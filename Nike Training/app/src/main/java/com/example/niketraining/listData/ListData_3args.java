@@ -6,10 +6,10 @@ public class ListData_3args {
     private String description;
     private int imgId;
 
-    public ListData_3args(String description, int imgId, String title) {
-        this.imgId = imgId;
+    public ListData_3args(String title, String description, int imgId) {
         this.title = title;
         this.description = description;
+        this.imgId = imgId;
     }
 
     public int getImgId() {
@@ -35,5 +35,4 @@ public class ListData_3args {
     public void setDescription(String description) {
         this.description = description;
     }
-
 }

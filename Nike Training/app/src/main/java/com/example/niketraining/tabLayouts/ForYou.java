@@ -1,62 +1,68 @@
 package com.example.niketraining.tabLayouts;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.DividerItemDecoration;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.niketraining.R;
-import com.example.niketraining.MainRecyclerAdapter;
-import com.example.niketraining.Section;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.example.niketraining.R;
+import com.example.niketraining.listAdapters.ListAdapterF;
+import com.example.niketraining.listData.ListData_3args;
 
 public class ForYou extends Fragment {
 
-    private static final String TAG = "ForYou";
-    List<Section> sectionList = new ArrayList<>();
-    RecyclerView mainRecyclerView;
+    private RecyclerView recyclerView;
+    private RecyclerView recyclerView2;
+
+    private ListAdapterF adapter;
+    private ListAdapterF adapter2;
 
     private View view;
 
+    //recyclerView 1
+    ListData_3args[] listData3 = new ListData_3args[] {
+            new ListData_3args("Go, Rest, Repeat","30 min, Beginner",R.drawable.for_you_1),
+            new ListData_3args("Quick-Hit Abs","15 min, Intermediate",R.drawable.for_you_2),
+            new ListData_3args("Extend Your Range","15 min, Beginner",R.drawable.for_you_3),
+            new ListData_3args("Essential Strength Yoga","23 min, Beginner",R.drawable.for_you_4),
+            new ListData_3args("The Quick Quarter","15 min, Intermediate",R.drawable.for_you_5),
+    };
+
+    //recyclerView 2
+    ListData_3args[] listData3_2 = new ListData_3args[] {
+            new ListData_3args("Athlete Agility","29 min, Intermediate",R.drawable.for_you_6),
+            new ListData_3args("Wake-Up Warm-Up","11 min, Beginner",R.drawable.for_you_7),
+            new ListData_3args("Sunset Stretch","11 min, Beginner",R.drawable.for_you_8),
+            new ListData_3args("Strong Core & Cardio","30 min, Intermediate",R.drawable.for_you_9),
+            new ListData_3args("Cardio Kick","20 min, Beginner",R.drawable.for_you_10),
+    };
+
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.tab_for_you, container, false);
-
-        initData();
-
-        mainRecyclerView = view.findViewById(R.id.mainRecyclerView);
-        MainRecyclerAdapter mainRecyclerAdapter = new MainRecyclerAdapter(sectionList);
-        mainRecyclerView.setAdapter(mainRecyclerAdapter);
-
-        return view;
+    public void onResume() {
+        super.onResume();
     }
 
-    private void initData() {
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        view = inflater.inflate(R.layout.tab_for_you, container, false);
 
-        String sectionOneName = "Top Picks For You";
-        List<String> sectionOneItems = new ArrayList<>();
-        sectionOneItems.add("Go, Rest, Repeat");
-        sectionOneItems.add("30 min, Beginner");
-        sectionOneItems.add("Endgame");
+        //recyclerView 1
+        recyclerView = view.findViewById(R.id.recyclerViewF);
+        adapter = new ListAdapterF(listData3);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
+        recyclerView.setAdapter(adapter);
 
-        String sectionTwoName = "New Workouts";
-        List<String> sectionTwoItems = new ArrayList<>();
-        sectionTwoItems.add("Pirates of the Caribbean");
-        sectionTwoItems.add("King Kong");
-        sectionTwoItems.add("Life of Pie");
+        //recyclerView 2
+        recyclerView2 = view.findViewById(R.id.recyclerViewF2);
+        adapter2 = new ListAdapterF(listData3_2);
+        recyclerView2.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
+        recyclerView2.setAdapter(adapter2);
 
-        sectionList.add(new Section(sectionOneName, sectionOneItems));
-        sectionList.add(new Section(sectionTwoName, sectionTwoItems));
-
-        Log.d(TAG, "initData: " + sectionList);
+        return view;
     }
 }

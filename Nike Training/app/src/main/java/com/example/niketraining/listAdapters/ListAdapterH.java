@@ -24,7 +24,6 @@ public class ListAdapterH extends RecyclerView.Adapter<ListAdapterH.ViewHolder> 
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
         View listItem = layoutInflater.inflate(R.layout.recycler_history, parent, false);
         ViewHolder viewHolder = new ViewHolder(listItem);
@@ -34,7 +33,6 @@ public class ListAdapterH extends RecyclerView.Adapter<ListAdapterH.ViewHolder> 
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-
         final ListData_3args myListData3args = listdata[position];
         holder.title.setText(listdata[position].getTitle());
         holder.description.setText(listdata[position].getDescription());
@@ -58,7 +56,6 @@ public class ListAdapterH extends RecyclerView.Adapter<ListAdapterH.ViewHolder> 
         public ImageView image;
         public TextView title;
         public TextView description;
-
         public RelativeLayout relativeLayout;
 
         public ViewHolder(View itemView) {
@@ -69,5 +66,4 @@ public class ListAdapterH extends RecyclerView.Adapter<ListAdapterH.ViewHolder> 
             relativeLayout = (RelativeLayout)itemView.findViewById(R.id.relativeLayoutH);
         }
     }
-
 }

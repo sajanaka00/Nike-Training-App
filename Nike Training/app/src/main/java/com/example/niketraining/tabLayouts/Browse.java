@@ -20,9 +20,9 @@ public class Browse extends Fragment {
     private View view;
 
     ListData_2args[] listData2 = new ListData_2args[] {
-            new ListData_2args(R.drawable.browse_1, "Muscle Group"),
-            new ListData_2args(R.drawable.browse_2,"Workout Focus"),
-            new ListData_2args(R.drawable.browse_3,"Equipment"),
+            new ListData_2args("Muscle Group", R.drawable.browse_1),
+            new ListData_2args("Workout Focus", R.drawable.browse_2),
+            new ListData_2args("Equipment", R.drawable.browse_3),
     };
 
     @Override

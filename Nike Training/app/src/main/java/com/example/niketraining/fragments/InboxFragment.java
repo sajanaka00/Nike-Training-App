@@ -12,7 +12,6 @@ import android.view.ViewGroup;
 
 import com.example.niketraining.R;
 import com.example.niketraining.listAdapters.ListAdapterI;
-import com.example.niketraining.listData.ListData_3args;
 import com.example.niketraining.listData.ListData_3args_noImg;
 
 public class InboxFragment extends Fragment {
@@ -44,6 +43,5 @@ public class InboxFragment extends Fragment {
         recyclerView.setAdapter(adapter);
 
         return view;
-
     }
 }

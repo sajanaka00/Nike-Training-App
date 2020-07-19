@@ -21,7 +21,7 @@ public class History extends Fragment {
     private View view;
 
     ListData_3args[] listDatum3args = new ListData_3args[] {
-            new ListData_3args("Fri, 19 Apr \t  1:15", R.drawable.history, "Runner Cool Down"),
+            new ListData_3args("Runner Cool Down", "Fri, 19 Apr \t  1:15", R.drawable.history),
     };
 
     @Override

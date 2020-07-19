@@ -24,7 +24,6 @@ public class ListAdapterP extends RecyclerView.Adapter<ListAdapterP.ViewHolder> 
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
         View listItem = layoutInflater.inflate(R.layout.recycler_plans, parent, false);
         ViewHolder viewHolder = new ViewHolder(listItem);
@@ -34,7 +33,6 @@ public class ListAdapterP extends RecyclerView.Adapter<ListAdapterP.ViewHolder> 
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-
         final ListData_3args myListData3args = listdata[position];
         holder.title.setText(listdata[position].getTitle());
         holder.description.setText(listdata[position].getDescription());
@@ -44,7 +42,7 @@ public class ListAdapterP extends RecyclerView.Adapter<ListAdapterP.ViewHolder> 
         holder.relativeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(view.getContext(),"Clicked on item: " + myListData3args.getTitle(),Toast.LENGTH_LONG).show();
+                Toast.makeText(view.getContext(), "Clicked on item: " + myListData3args.getTitle(), Toast.LENGTH_LONG).show();
             }
         });
     }
@@ -58,7 +56,6 @@ public class ListAdapterP extends RecyclerView.Adapter<ListAdapterP.ViewHolder> 
         public ImageView image;
         public TextView title;
         public TextView description;
-
         public RelativeLayout relativeLayout;
 
         public ViewHolder(View itemView) {
@@ -66,8 +63,7 @@ public class ListAdapterP extends RecyclerView.Adapter<ListAdapterP.ViewHolder> 
             this.image = (ImageView) itemView.findViewById(R.id.imageP);
             this.title = (TextView) itemView.findViewById(R.id.titleP);
             this.description = (TextView) itemView.findViewById(R.id.descriptionP);
-            relativeLayout = (RelativeLayout)itemView.findViewById(R.id.relativeLayoutP);
+            relativeLayout = (RelativeLayout) itemView.findViewById(R.id.relativeLayoutP);
         }
     }
-
 }

@@ -24,7 +24,6 @@ public class ListAdapterB extends RecyclerView.Adapter<ListAdapterB.ViewHolder> 
 
     @Override
     public ListAdapterB.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
         View listItem = layoutInflater.inflate(R.layout.recycler_browse, parent, false);
         ListAdapterB.ViewHolder viewHolder = new ListAdapterB.ViewHolder(listItem);
@@ -34,7 +33,6 @@ public class ListAdapterB extends RecyclerView.Adapter<ListAdapterB.ViewHolder> 
 
     @Override
     public void onBindViewHolder(ListAdapterB.ViewHolder holder, int position) {
-
         final ListData_2args myListData = listdata[position];
         holder.title.setText(listdata[position].getTitle());
         holder.image.setImageResource(listdata[position].getImgId());

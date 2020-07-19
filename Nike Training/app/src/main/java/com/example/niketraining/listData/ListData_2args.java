@@ -5,9 +5,9 @@ public class ListData_2args {
     private String title;
     private int imgId;
 
-    public ListData_2args(int imgId, String title) {
-        this.imgId = imgId;
+    public ListData_2args(String title, int imgId) {
         this.title = title;
+        this.imgId = imgId;
     }
 
     public int getImgId() {
@@ -25,5 +25,4 @@ public class ListData_2args {
     public void setTitle(String title) {
         this.title = title;
     }
-
 }

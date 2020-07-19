@@ -35,5 +35,4 @@ public class ListData_3args_noImg  {
     public void setDescription(String description) {
         this.description = description;
     }
-
 }
