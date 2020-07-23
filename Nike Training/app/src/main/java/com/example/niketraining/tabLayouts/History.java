@@ -11,7 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.niketraining.listAdapters.ListAdapterH;
-import com.example.niketraining.ListData;
+import com.example.niketraining.listData.ListData_3args;
 import com.example.niketraining.R;
 
 public class History extends Fragment {
@@ -20,8 +20,8 @@ public class History extends Fragment {
     private ListAdapterH adapter;
     private View view;
 
-    ListData[] listData = new ListData[] {
-            new ListData("Runner Cool Down \n Fri, 19 Apr \t  1:15", R.drawable.history_1,"START UP"),
+    ListData_3args[] listDatum3args = new ListData_3args[] {
+            new ListData_3args("Runner Cool Down", "Fri, 19 Apr \t  1:15", R.drawable.history),
     };
 
     @Override
@@ -35,7 +35,7 @@ public class History extends Fragment {
         view = inflater.inflate(R.layout.tab_history, container, false);
 
         recyclerView = view.findViewById(R.id.recyclerViewH);
-        adapter = new ListAdapterH(listData);
+        adapter = new ListAdapterH(listDatum3args);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(adapter);
 

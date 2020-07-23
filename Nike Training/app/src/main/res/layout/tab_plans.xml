@@ -3,7 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".tabLayouts.Plans" >
 
     <ScrollView
         android:layout_width="match_parent"
@@ -13,8 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:orientation="vertical"
-            tools:context=".tabLayouts.History">
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/pickYourPlan"
@@ -47,7 +47,7 @@
                 android:layout_height="match_parent"
                 android:layout_below="@+id/contentLight_plan"
                 android:orientation="vertical"
-                android:layout_marginTop="80dp" />
+                android:layout_marginTop="60dp" />
 
         </RelativeLayout>
 

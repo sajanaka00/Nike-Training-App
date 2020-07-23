@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".tabLayouts.Collections" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/topPicks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="Top Picks"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:fontFamily="@font/ptsans_regular"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/topPicks"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="15dp"
+                android:orientation="horizontal"
+                android:scrollbars="horizontal" />
+
+            <TextView
+                android:id="@+id/lifeHacks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/recyclerViewC"
+                android:layout_marginTop="35dp"
+                android:layout_marginStart="20dp"
+                android:text="Life Hacks"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:fontFamily="@font/ptsans_regular"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewC_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lifeHacks"
+                android:orientation="horizontal"
+                android:scrollbars="horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="25dp"
+                android:layout_marginEnd="15dp"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</LinearLayout>

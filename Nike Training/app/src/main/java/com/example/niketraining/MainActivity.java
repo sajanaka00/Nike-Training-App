@@ -47,7 +47,6 @@ public class MainActivity extends AppCompatActivity {
                     selectedFragment = new InboxFragment();
                     break;
             }
-
             getSupportFragmentManager().beginTransaction().replace(R.id.container, selectedFragment).commit();
 
             return true;

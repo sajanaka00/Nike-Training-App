@@ -10,21 +10,20 @@ import android.widget.Toast;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.niketraining.ListData;
+import com.example.niketraining.listData.ListData_3args;
 import com.example.niketraining.R;
 
 public class ListAdapterH extends RecyclerView.Adapter<ListAdapterH.ViewHolder> {
 
-    private ListData[] listdata;
+    private ListData_3args[] listdata;
 
     // RecyclerView recyclerView;
-    public ListAdapterH(ListData[] listdata) {
+    public ListAdapterH(ListData_3args[] listdata) {
         this.listdata = listdata;
     }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
         View listItem = layoutInflater.inflate(R.layout.recycler_history, parent, false);
         ViewHolder viewHolder = new ViewHolder(listItem);
@@ -34,15 +33,16 @@ public class ListAdapterH extends RecyclerView.Adapter<ListAdapterH.ViewHolder> 
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
+        final ListData_3args myListData3args = listdata[position];
+        holder.title.setText(listdata[position].getTitle());
+        holder.description.setText(listdata[position].getDescription());
 
-        final ListData myListData = listdata[position];
-        holder.text.setText(listdata[position].getDescription());
         holder.image.setImageResource(listdata[position].getImgId());
 
         holder.relativeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(view.getContext(),"click on item: " + myListData.getDescription(),Toast.LENGTH_LONG).show();
+                Toast.makeText(view.getContext(),"Clicked on item: " + myListData3args.getTitle(),Toast.LENGTH_LONG).show();
             }
         });
     }
@@ -54,15 +54,16 @@ public class ListAdapterH extends RecyclerView.Adapter<ListAdapterH.ViewHolder> 
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         public ImageView image;
-        public TextView text;
+        public TextView title;
+        public TextView description;
         public RelativeLayout relativeLayout;
 
         public ViewHolder(View itemView) {
             super(itemView);
-            this.image = (ImageView) itemView.findViewById(R.id.image);
-            this.text = (TextView) itemView.findViewById(R.id.text);
+            this.image = (ImageView) itemView.findViewById(R.id.imageH);
+            this.title = (TextView) itemView.findViewById(R.id.titleH);
+            this.description = (TextView) itemView.findViewById(R.id.descriptionH);
             relativeLayout = (RelativeLayout)itemView.findViewById(R.id.relativeLayoutH);
         }
     }
-
 }
