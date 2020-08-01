@@ -11,7 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.niketraining.listAdapters.ListAdapterP;
-import com.example.niketraining.listData.ListData_3args;
+import com.example.niketraining.listData.ListData_1imgView_2textViews;
 import com.example.niketraining.R;
 
 public class Plans extends Fragment {
@@ -20,11 +20,11 @@ public class Plans extends Fragment {
     private ListAdapterP adapter;
     private View view;
 
-    ListData_3args[] listData3 = new ListData_3args[] {
-            new ListData_3args("START UP", "Kick it off with four weeks of guided, well-balanced workouts to get you fit.", R.drawable.plan_1),
-            new ListData_3args("LEAN FIT", "Get lean and fit over six weeks with a balanced plan that builds endurance.", R.drawable.plan_2),
-            new ListData_3args("BODYWEIGHT ONLY", "Push your strength and improve muscle tone over four weeks-all without weights.", R.drawable.plan_3),
-            new ListData_3args("GYM STRONG", "Build full-body strength with a focus on weight training over 8 weeks.", R.drawable.plan_4),
+    ListData_1imgView_2textViews[] listData3 = new ListData_1imgView_2textViews[] {
+            new ListData_1imgView_2textViews("START UP", "Kick it off with four weeks of guided, well-balanced workouts to get you fit.", R.drawable.plan_1),
+            new ListData_1imgView_2textViews("LEAN FIT", "Get lean and fit over six weeks with a balanced plan that builds endurance.", R.drawable.plan_2),
+            new ListData_1imgView_2textViews("BODYWEIGHT ONLY", "Push your strength and improve muscle tone over four weeks-all without weights.", R.drawable.plan_3),
+            new ListData_1imgView_2textViews("GYM STRONG", "Build full-body strength with a focus on weight training over 8 weeks.", R.drawable.plan_4),
     };
 
     @Override

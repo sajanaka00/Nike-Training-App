@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 
 import com.example.niketraining.R;
 import com.example.niketraining.listAdapters.ListAdapterI;
-import com.example.niketraining.listData.ListData_3args_noImg;
+import com.example.niketraining.listData.ListData_3textViews;
 
 public class InboxFragment extends Fragment {
 
@@ -20,11 +20,11 @@ public class InboxFragment extends Fragment {
     private ListAdapterI adapter;
     private View view;
 
-    ListData_3args_noImg[] listData3 = new ListData_3args_noImg[] {
-            new ListData_3args_noImg("JANE MCLEAN","accepted your friend request","1m ago"),
-            new ListData_3args_noImg("KELLY ROWENA","commented on your post","5m ago"),
-            new ListData_3args_noImg("CLAUDIA BROOK","cheered your post","2d ago"),
-            new ListData_3args_noImg("KELLY ROWENA","accepted your friend request","2d ago"),
+    ListData_3textViews[] listData3 = new ListData_3textViews[] {
+            new ListData_3textViews("JANE MCLEAN","accepted your friend request","1m ago"),
+            new ListData_3textViews("KELLY ROWENA","commented on your post","5m ago"),
+            new ListData_3textViews("CLAUDIA BROOK","cheered your post","2d ago"),
+            new ListData_3textViews("KELLY ROWENA","accepted your friend request","2d ago"),
     };
 
     @Override

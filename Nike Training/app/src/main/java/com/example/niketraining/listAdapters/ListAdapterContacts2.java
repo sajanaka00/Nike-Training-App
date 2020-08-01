@@ -13,31 +13,31 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.niketraining.R;
 import com.example.niketraining.listData.ListData_1imgView_2textViews;
 
-public class ListAdapterC extends RecyclerView.Adapter<ListAdapterC.ViewHolder> {
+public class ListAdapterContacts2 extends RecyclerView.Adapter<ListAdapterContacts2.ViewHolder>{
 
     private ListData_1imgView_2textViews[] listdata;
 
     // RecyclerView recyclerView;
-    public ListAdapterC(ListData_1imgView_2textViews[] listdata) {
+    public ListAdapterContacts2(ListData_1imgView_2textViews[] listdata) {
         this.listdata = listdata;
     }
 
     @Override
-    public ListAdapterC.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public ListAdapterContacts2.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        View listItem = layoutInflater.inflate(R.layout.recycler_collections, parent, false);
-        ListAdapterC.ViewHolder viewHolder = new ListAdapterC.ViewHolder(listItem);
+        View listItem = layoutInflater.inflate(R.layout.recycler_contacts, parent, false);
+        ListAdapterContacts2.ViewHolder viewHolder = new ListAdapterContacts2.ViewHolder(listItem);
 
         return viewHolder;
     }
 
     @Override
-    public void onBindViewHolder(ListAdapterC.ViewHolder holder, int position) {
+    public void onBindViewHolder(ListAdapterContacts2.ViewHolder holder, int position) {
         final ListData_1imgView_2textViews myListData3args = listdata[position];
-        holder.title.setText(listdata[position].getTitle());
-        holder.description.setText(listdata[position].getDescription());
 
         holder.image.setImageResource(listdata[position].getImgId());
+        holder.title.setText(listdata[position].getTitle());
+        holder.description.setText(listdata[position].getDescription());
 
         holder.relativeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,10 +60,10 @@ public class ListAdapterC extends RecyclerView.Adapter<ListAdapterC.ViewHolder> 
 
         public ViewHolder(View itemView) {
             super(itemView);
-            this.image = (ImageView) itemView.findViewById(R.id.imageC);
-            this.title = (TextView) itemView.findViewById(R.id.titleC);
-            this.description = (TextView) itemView.findViewById(R.id.descriptionC);
-            relativeLayout = (RelativeLayout) itemView.findViewById(R.id.relativeLayoutC);
+            this.image = (ImageView) itemView.findViewById(R.id.imageContacts2);
+            this.title = (TextView) itemView.findViewById(R.id.titleContacts2);
+            this.description = (TextView) itemView.findViewById(R.id.descriptionContacts2);
+            relativeLayout = (RelativeLayout) itemView.findViewById(R.id.relativeLayoutContacts);
         }
     }
 }

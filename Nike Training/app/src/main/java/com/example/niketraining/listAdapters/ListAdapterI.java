@@ -10,14 +10,14 @@ import android.widget.Toast;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.niketraining.R;
-import com.example.niketraining.listData.ListData_3args_noImg;
+import com.example.niketraining.listData.ListData_3textViews;
 
 public class ListAdapterI extends RecyclerView.Adapter<ListAdapterI.ViewHolder> {
 
-    private ListData_3args_noImg[] listdata;
+    private ListData_3textViews[] listdata;
 
     // RecyclerView recyclerView;
-    public ListAdapterI(ListData_3args_noImg[] listdata) {
+    public ListAdapterI(ListData_3textViews[] listdata) {
         this.listdata = listdata;
     }
 
@@ -32,7 +32,7 @@ public class ListAdapterI extends RecyclerView.Adapter<ListAdapterI.ViewHolder> 
 
     @Override
     public void onBindViewHolder(ListAdapterI.ViewHolder holder, int position) {
-        final ListData_3args_noImg myListData3args = listdata[position];
+        final ListData_3textViews myListData3args = listdata[position];
         holder.title.setText(listdata[position].getTitle());
         holder.description.setText(listdata[position].getDescription());
         holder.description2.setText(listdata[position].getDescription2());

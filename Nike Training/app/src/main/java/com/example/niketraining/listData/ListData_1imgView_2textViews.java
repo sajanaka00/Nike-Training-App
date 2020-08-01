@@ -1,12 +1,12 @@
 package com.example.niketraining.listData;
 
-public class ListData_3args {
+public class ListData_1imgView_2textViews {
 
     private String title;
     private String description;
     private int imgId;
 
-    public ListData_3args(String title, String description, int imgId) {
+    public ListData_1imgView_2textViews(String title, String description, int imgId) {
         this.title = title;
         this.description = description;
         this.imgId = imgId;

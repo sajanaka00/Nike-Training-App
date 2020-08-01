@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.niketraining.listData.ListData_2args;
+import com.example.niketraining.listData.ListData_1imgView_1textView;
 import com.example.niketraining.R;
 import com.example.niketraining.listAdapters.ListAdapterB;
 
@@ -19,10 +19,10 @@ public class Browse extends Fragment {
     private ListAdapterB adapter;
     private View view;
 
-    ListData_2args[] listData2 = new ListData_2args[] {
-            new ListData_2args("Muscle Group", R.drawable.browse_1),
-            new ListData_2args("Workout Focus", R.drawable.browse_2),
-            new ListData_2args("Equipment", R.drawable.browse_3),
+    ListData_1imgView_1textView[] listData2 = new ListData_1imgView_1textView[] {
+            new ListData_1imgView_1textView("Muscle Group", R.drawable.browse_1),
+            new ListData_1imgView_1textView("Workout Focus", R.drawable.browse_2),
+            new ListData_1imgView_1textView("Equipment", R.drawable.browse_3),
     };
 
     @Override

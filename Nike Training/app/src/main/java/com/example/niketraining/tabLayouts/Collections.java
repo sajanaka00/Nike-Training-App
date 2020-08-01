@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.niketraining.R;
 import com.example.niketraining.listAdapters.ListAdapterC;
-import com.example.niketraining.listData.ListData_3args;
+import com.example.niketraining.listData.ListData_1imgView_2textViews;
 
 public class Collections extends Fragment {
 
@@ -24,17 +24,17 @@ public class Collections extends Fragment {
     private View view;
 
     //recyclerView 1
-    ListData_3args[] listData3 = new ListData_3args[] {
-            new ListData_3args("Best of Abs, Arms and Glutes", "12 Workouts, All levels", R.drawable.collection_1),
-            new ListData_3args("Get Leaner Strong Abs", "8 Workouts, All levels", R.drawable.collection_2),
-            new ListData_3args("Get Strong to Get Toned", "6 Workouts, All levels", R.drawable.collection_3),
+    ListData_1imgView_2textViews[] listData3 = new ListData_1imgView_2textViews[] {
+            new ListData_1imgView_2textViews("Best of Abs, Arms and Glutes", "12 Workouts, All levels", R.drawable.collection_1),
+            new ListData_1imgView_2textViews("Get Leaner Strong Abs", "8 Workouts, All levels", R.drawable.collection_2),
+            new ListData_1imgView_2textViews("Get Strong to Get Toned", "6 Workouts, All levels", R.drawable.collection_3),
     };
 
     //recyclerView 2
-    ListData_3args[] listData3_2 = new ListData_3args[] {
-            new ListData_3args("Boost Your Mood", "12 Workouts, All levels", R.drawable.collection_4),
-            new ListData_3args("For the whole family", "16 Workouts, All levels", R.drawable.collection_5),
-            new ListData_3args("Big Workouts for Small Spaces", "12 Workouts, All levels", R.drawable.collection_6),
+    ListData_1imgView_2textViews[] listData3_2 = new ListData_1imgView_2textViews[] {
+            new ListData_1imgView_2textViews("Boost Your Mood", "12 Workouts, All levels", R.drawable.collection_4),
+            new ListData_1imgView_2textViews("For the whole family", "16 Workouts, All levels", R.drawable.collection_5),
+            new ListData_1imgView_2textViews("Big Workouts for Small Spaces", "12 Workouts, All levels", R.drawable.collection_6),
     };
 
     @Override

@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.niketraining.R;
 import com.example.niketraining.listAdapters.ListAdapterF;
-import com.example.niketraining.listData.ListData_3args;
+import com.example.niketraining.listData.ListData_1imgView_2textViews;
 
 public class ForYou extends Fragment {
 
@@ -24,21 +24,21 @@ public class ForYou extends Fragment {
     private View view;
 
     //recyclerView 1
-    ListData_3args[] listData3 = new ListData_3args[] {
-            new ListData_3args("Go, Rest, Repeat","30 min, Beginner",R.drawable.for_you_1),
-            new ListData_3args("Quick-Hit Abs","15 min, Intermediate",R.drawable.for_you_2),
-            new ListData_3args("Extend Your Range","15 min, Beginner",R.drawable.for_you_3),
-            new ListData_3args("Essential Strength Yoga","23 min, Beginner",R.drawable.for_you_4),
-            new ListData_3args("The Quick Quarter","15 min, Intermediate",R.drawable.for_you_5),
+    ListData_1imgView_2textViews[] listData3 = new ListData_1imgView_2textViews[] {
+            new ListData_1imgView_2textViews("Go, Rest, Repeat","30 min, Beginner",R.drawable.for_you_1),
+            new ListData_1imgView_2textViews("Quick-Hit Abs","15 min, Intermediate",R.drawable.for_you_2),
+            new ListData_1imgView_2textViews("Extend Your Range","15 min, Beginner",R.drawable.for_you_3),
+            new ListData_1imgView_2textViews("Essential Strength Yoga","23 min, Beginner",R.drawable.for_you_4),
+            new ListData_1imgView_2textViews("The Quick Quarter","15 min, Intermediate",R.drawable.for_you_5),
     };
 
     //recyclerView 2
-    ListData_3args[] listData3_2 = new ListData_3args[] {
-            new ListData_3args("Athlete Agility","29 min, Intermediate",R.drawable.for_you_6),
-            new ListData_3args("Wake-Up Warm-Up","11 min, Beginner",R.drawable.for_you_7),
-            new ListData_3args("Sunset Stretch","11 min, Beginner",R.drawable.for_you_8),
-            new ListData_3args("Strong Core & Cardio","30 min, Intermediate",R.drawable.for_you_9),
-            new ListData_3args("Cardio Kick","20 min, Beginner",R.drawable.for_you_10),
+    ListData_1imgView_2textViews[] listData3_2 = new ListData_1imgView_2textViews[] {
+            new ListData_1imgView_2textViews("Athlete Agility","29 min, Intermediate",R.drawable.for_you_6),
+            new ListData_1imgView_2textViews("Wake-Up Warm-Up","11 min, Beginner",R.drawable.for_you_7),
+            new ListData_1imgView_2textViews("Sunset Stretch","11 min, Beginner",R.drawable.for_you_8),
+            new ListData_1imgView_2textViews("Strong Core & Cardio","30 min, Intermediate",R.drawable.for_you_9),
+            new ListData_1imgView_2textViews("Cardio Kick","20 min, Beginner",R.drawable.for_you_10),
     };
 
     @Override

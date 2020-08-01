@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.example.niketraining.fragments.AddFriendsFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import com.example.niketraining.fragments.ActivityFragment;
@@ -24,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.container, new FeedFragment()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.container, new AddFriendsFragment()).commit();
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener navListener =
@@ -35,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
             switch (menuItem.getItemId()) {
                 case R.id.feed:
-                    selectedFragment = new FeedFragment();
+                    selectedFragment = new AddFriendsFragment();
                     break;
                 case R.id.activity:
                     selectedFragment = new ActivityFragment();

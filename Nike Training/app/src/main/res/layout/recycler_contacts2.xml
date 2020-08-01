@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeLayoutContacts"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recyclerContacts"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/imageContacts2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_centerVertical="true"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/imageContacts">
+
+            <TextView
+                android:id="@+id/titleContacts2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/ptsans_regular" />
+
+            <TextView
+                android:id="@+id/descriptionContacts2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titleContacts"
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="20dp"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/ptsans_regular"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/horLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/recyclerContacts"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/line"/>
+
+</RelativeLayout>
