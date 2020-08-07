@@ -11,13 +11,13 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.niketraining.R;
-import com.example.niketraining.listAdapters.ListAdapterI;
+import com.example.niketraining.listAdapters.ListAdapterInbox;
 import com.example.niketraining.listData.ListData_3textViews;
 
 public class InboxFragment extends Fragment {
 
     private RecyclerView recyclerView;
-    private ListAdapterI adapter;
+    private ListAdapterInbox adapter;
     private View view;
 
     ListData_3textViews[] listData3 = new ListData_3textViews[] {
@@ -38,7 +38,7 @@ public class InboxFragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_inbox, container, false);
 
         recyclerView = view.findViewById(R.id.recyclerViewI);
-        adapter = new ListAdapterI(listData3);
+        adapter = new ListAdapterInbox(listData3);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
         recyclerView.setAdapter(adapter);
 

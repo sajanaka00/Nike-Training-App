@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:background="@color/lightGrey"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/contentBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16.5sp"
+            android:hint="NO SUGGESTED FRIENDS"
+            android:textAlignment="center"
+            android:textColorHint="@color/black"
+            android:background="@drawable/content_no_border"
+            android:fontFamily="@font/archivo_narrow_regular" />
+
+        <TextView
+            android:id="@+id/contentLight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:hint="@string/contentLight_suggested"
+            android:textSize="14sp"
+            android:textAlignment="center"
+            android:lineSpacingExtra="3sp"
+            android:textColorHint="@color/black"
+            android:background="@drawable/content_no_border"
+            android:fontFamily="@font/notosansjp_light" />
+
+    </LinearLayout>
+
+</RelativeLayout>

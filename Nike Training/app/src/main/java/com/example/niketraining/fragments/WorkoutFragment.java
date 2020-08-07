@@ -43,5 +43,7 @@ public class WorkoutFragment extends Fragment {
         tabLayout.setupWithViewPager(viewPager);
 
         return view;
+
+
     }
 }

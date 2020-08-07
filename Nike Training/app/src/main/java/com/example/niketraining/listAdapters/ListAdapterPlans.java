@@ -10,37 +10,39 @@ import android.widget.Toast;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.niketraining.listData.ListData_1imgView_1textView;
+import com.example.niketraining.listData.ListData_1imgView_2textViews;
 import com.example.niketraining.R;
 
-public class ListAdapterB extends RecyclerView.Adapter<ListAdapterB.ViewHolder> {
+public class ListAdapterPlans extends RecyclerView.Adapter<ListAdapterPlans.ViewHolder> {
 
-    private ListData_1imgView_1textView[] listdata;
+    private ListData_1imgView_2textViews[] listdata;
 
     // RecyclerView recyclerView;
-    public ListAdapterB(ListData_1imgView_1textView[] listdata) {
+    public ListAdapterPlans(ListData_1imgView_2textViews[] listdata) {
         this.listdata = listdata;
     }
 
     @Override
-    public ListAdapterB.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        View listItem = layoutInflater.inflate(R.layout.recycler_browse, parent, false);
-        ListAdapterB.ViewHolder viewHolder = new ListAdapterB.ViewHolder(listItem);
+        View listItem = layoutInflater.inflate(R.layout.recycler_plans, parent, false);
+        ViewHolder viewHolder = new ViewHolder(listItem);
 
         return viewHolder;
     }
 
     @Override
-    public void onBindViewHolder(ListAdapterB.ViewHolder holder, int position) {
-        final ListData_1imgView_1textView myListData = listdata[position];
+    public void onBindViewHolder(ViewHolder holder, int position) {
+        final ListData_1imgView_2textViews myListData3args = listdata[position];
         holder.title.setText(listdata[position].getTitle());
+        holder.description.setText(listdata[position].getDescription());
+
         holder.image.setImageResource(listdata[position].getImgId());
 
         holder.relativeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(view.getContext(),"Clicked on item: " + myListData.getTitle(),Toast.LENGTH_LONG).show();
+                Toast.makeText(view.getContext(), "Clicked on item: " + myListData3args.getTitle(), Toast.LENGTH_LONG).show();
             }
         });
     }
@@ -53,13 +55,15 @@ public class ListAdapterB extends RecyclerView.Adapter<ListAdapterB.ViewHolder> 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         public ImageView image;
         public TextView title;
+        public TextView description;
         public RelativeLayout relativeLayout;
 
         public ViewHolder(View itemView) {
             super(itemView);
-            this.image = (ImageView) itemView.findViewById(R.id.imageB);
-            this.title = (TextView) itemView.findViewById(R.id.titleB);
-            relativeLayout = (RelativeLayout)itemView.findViewById(R.id.relativeLayoutB);
+            this.image = (ImageView) itemView.findViewById(R.id.imageP);
+            this.title = (TextView) itemView.findViewById(R.id.titleP);
+            this.description = (TextView) itemView.findViewById(R.id.descriptionP);
+            relativeLayout = (RelativeLayout) itemView.findViewById(R.id.relativeLayoutP);
         }
     }
 }

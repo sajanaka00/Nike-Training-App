@@ -10,14 +10,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.niketraining.listAdapters.ListAdapterP;
+import com.example.niketraining.listAdapters.ListAdapterPlans;
 import com.example.niketraining.listData.ListData_1imgView_2textViews;
 import com.example.niketraining.R;
 
 public class Plans extends Fragment {
 
     private RecyclerView recyclerView;
-    private ListAdapterP adapter;
+    private ListAdapterPlans adapter;
     private View view;
 
     ListData_1imgView_2textViews[] listData3 = new ListData_1imgView_2textViews[] {
@@ -38,7 +38,7 @@ public class Plans extends Fragment {
         view = inflater.inflate(R.layout.tab_plans, container, false);
 
         recyclerView = view.findViewById(R.id.recyclerViewP);
-        adapter = new ListAdapterP(listData3);
+        adapter = new ListAdapterPlans(listData3);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(adapter);
 

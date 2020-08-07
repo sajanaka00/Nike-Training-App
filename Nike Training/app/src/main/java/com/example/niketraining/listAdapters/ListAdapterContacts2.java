@@ -25,7 +25,7 @@ public class ListAdapterContacts2 extends RecyclerView.Adapter<ListAdapterContac
     @Override
     public ListAdapterContacts2.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        View listItem = layoutInflater.inflate(R.layout.recycler_contacts, parent, false);
+        View listItem = layoutInflater.inflate(R.layout.recycler_contacts2, parent, false);
         ListAdapterContacts2.ViewHolder viewHolder = new ListAdapterContacts2.ViewHolder(listItem);
 
         return viewHolder;

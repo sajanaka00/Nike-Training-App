@@ -4,13 +4,16 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.niketraining.R;
-import com.example.niketraining.listAdapters.ListAdapterF;
+import com.example.niketraining.fragments.QuickQuarterFragment;
+import com.example.niketraining.listAdapters.ListAdapterForYou;
 import com.example.niketraining.listData.ListData_1imgView_2textViews;
 
 public class ForYou extends Fragment {
@@ -18,10 +21,12 @@ public class ForYou extends Fragment {
     private RecyclerView recyclerView;
     private RecyclerView recyclerView2;
 
-    private ListAdapterF adapter;
-    private ListAdapterF adapter2;
+    private ListAdapterForYou adapter;
+    private ListAdapterForYou adapter2;
 
     private View view;
+
+//    ImageView imageView;
 
     //recyclerView 1
     ListData_1imgView_2textViews[] listData3 = new ListData_1imgView_2textViews[] {
@@ -53,15 +58,25 @@ public class ForYou extends Fragment {
 
         //recyclerView 1
         recyclerView = view.findViewById(R.id.recyclerViewF);
-        adapter = new ListAdapterF(listData3);
+        adapter = new ListAdapterForYou(listData3);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
         recyclerView.setAdapter(adapter);
 
         //recyclerView 2
         recyclerView2 = view.findViewById(R.id.recyclerViewF2);
-        adapter2 = new ListAdapterF(listData3_2);
+        adapter2 = new ListAdapterForYou(listData3_2);
         recyclerView2.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
         recyclerView2.setAdapter(adapter2);
+
+//        imageView = view.findViewById(R.id.for_you_1);
+//        imageView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+//                fragmentTransaction.replace(R.id.fragmentContainerQuickQuarter, new QuickQuarterFragment());
+//                fragmentTransaction.commit();
+//            }
+//        });
 
         return view;
     }

@@ -11,12 +11,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.niketraining.listData.ListData_1imgView_1textView;
 import com.example.niketraining.R;
-import com.example.niketraining.listAdapters.ListAdapterB;
+import com.example.niketraining.listAdapters.ListAdapterBrowse;
 
 public class Browse extends Fragment {
 
     private RecyclerView recyclerView;
-    private ListAdapterB adapter;
+    private ListAdapterBrowse adapter;
     private View view;
 
     ListData_1imgView_1textView[] listData2 = new ListData_1imgView_1textView[] {
@@ -36,7 +36,7 @@ public class Browse extends Fragment {
         view = inflater.inflate(R.layout.tab_browse, container, false);
 
         recyclerView = view.findViewById(R.id.recyclerViewB);
-        adapter = new ListAdapterB(listData2);
+        adapter = new ListAdapterBrowse(listData2);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(adapter);
 

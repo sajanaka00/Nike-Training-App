@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.niketraining.R;
-import com.example.niketraining.listAdapters.ListAdapterC;
+import com.example.niketraining.listAdapters.ListAdapterCollections;
 import com.example.niketraining.listData.ListData_1imgView_2textViews;
 
 public class Collections extends Fragment {
@@ -18,8 +18,8 @@ public class Collections extends Fragment {
     private RecyclerView recyclerView;
     private RecyclerView recyclerView2;
 
-    private ListAdapterC adapter;
-    private ListAdapterC adapter2;
+    private ListAdapterCollections adapter;
+    private ListAdapterCollections adapter2;
 
     private View view;
 
@@ -49,13 +49,13 @@ public class Collections extends Fragment {
 
         //recyclerView 1
         recyclerView = view.findViewById(R.id.recyclerViewC);
-        adapter = new ListAdapterC(listData3);
+        adapter = new ListAdapterCollections(listData3);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
         recyclerView.setAdapter(adapter);
 
         //recyclerView 2
         recyclerView2 = view.findViewById(R.id.recyclerViewC_2);
-        adapter2 = new ListAdapterC(listData3_2);
+        adapter2 = new ListAdapterCollections(listData3_2);
         recyclerView2.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
         recyclerView2.setAdapter(adapter2);
 

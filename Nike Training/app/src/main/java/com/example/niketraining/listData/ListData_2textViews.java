@@ -1,15 +1,13 @@
 package com.example.niketraining.listData;
 
-public class ListData_3textViews {
+public class ListData_2textViews {
 
     private String title;
     private String description;
-    private String description2;
 
-    public ListData_3textViews(String title, String description, String description2) {
+    public ListData_2textViews(String title, String description) {
         this.title = title;
         this.description = description;
-        this.description2 = description2;
     }
 
     public String getTitle() {
@@ -26,14 +24,6 @@ public class ListData_3textViews {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public String getDescription2() {
-        return description2;
-    }
-
-    public void setDescription2(String description2) {
-        this.description2 = description2;
     }
 
 }

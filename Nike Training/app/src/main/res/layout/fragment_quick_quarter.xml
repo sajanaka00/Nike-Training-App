@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/fragmentContainerAddFriends"
+    android:id="@+id/fragmentContainerQuickQuarter"
     android:background="@color/white"
     android:orientation="vertical"
     tools:context=".MainActivity">
@@ -37,7 +37,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:text="FIND FRIENDS"
+                android:text="Overview"
                 android:textStyle="bold"
                 android:textSize="16sp"
                 android:textColor="@color/black"
@@ -50,20 +50,22 @@
                 android:layout_alignParentEnd="true"
                 android:layout_centerInParent="true"
                 android:layout_marginEnd="20dp"
-                android:background="@drawable/vector_search"/>
+                android:background="@drawable/vector_bookmark"/>
 
         </RelativeLayout>
 
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tabLayout"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="15dp">
 
-        <androidx.viewpager.widget.ViewPager
-            android:id="@+id/viewPager"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:background="@drawable/for_you_1"
+                android:scaleType="fitXY"/>
+
+        </RelativeLayout>
 
     </LinearLayout>
 

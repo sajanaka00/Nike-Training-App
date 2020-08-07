@@ -7,9 +7,9 @@
     android:orientation="horizontal">
 
     <RelativeLayout
+        android:id="@+id/recyclerContacts"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/recyclerContacts"
         android:layout_marginTop="10dp">
 
         <ImageView
@@ -22,7 +22,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/imageContacts">
+            android:layout_marginStart="50dp">
 
             <TextView
                 android:id="@+id/titleContacts2"
@@ -37,11 +37,9 @@
                 android:id="@+id/descriptionContacts2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/titleContacts"
-                android:layout_marginTop="1dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginStart="20dp"
-                android:textSize="16sp"
-                android:textColor="@color/black"
+                android:textSize="15sp"
                 android:fontFamily="@font/ptsans_regular"/>
 
         </RelativeLayout>
@@ -54,6 +52,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/recyclerContacts"
         android:layout_marginTop="10dp"
+        android:layout_marginStart="70dp"
         android:background="@drawable/line"/>
 
 </RelativeLayout>
