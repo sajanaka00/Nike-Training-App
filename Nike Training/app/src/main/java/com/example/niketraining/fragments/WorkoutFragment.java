@@ -14,6 +14,8 @@ import android.widget.TextView;
 
 import com.example.niketraining.R;
 import com.example.niketraining.TabAdapter;
+import com.example.niketraining.tabLayouts.Achievements;
+import com.example.niketraining.tabLayouts.History;
 import com.google.android.material.tabs.TabLayout;
 
 import com.example.niketraining.tabLayouts.Browse;
@@ -40,20 +42,26 @@ public class WorkoutFragment extends Fragment {
         tabLayout = (TabLayout) view.findViewById(R.id.tabLayout);
         adapter = new TabAdapter(getActivity().getSupportFragmentManager());
 
-        adapter.addFragment(new ForYou(), "For You");
-        adapter.addFragment(new Browse(), "Browse");
-        adapter.addFragment(new Collections(), "Collections");
-        adapter.addFragment(new Plans(), "Plans");
-
-        viewPager.setAdapter(adapter);
+        setupViewPager(viewPager);
         tabLayout.setupWithViewPager(viewPager);
 
         textView = view.findViewById(R.id.bookmark);
-        font = Typeface.createFromAsset(getAssets(), "fonts/fontawesome-webfont.ttf");
+        font = Typeface.createFromAsset(getActivity().getAssets(), "fontawesome-webfont.ttf");
+
         textView.setTypeface(font);
 
         return view;
 
+    }
+
+    private void setupViewPager(ViewPager viewPager) {
+        TabAdapter adapter = new TabAdapter(getChildFragmentManager());
+        adapter.addFragment(new ForYou(), "For You");
+        adapter.addFragment(new Browse(), "Browse");
+        adapter.addFragment(new Collections(),"Collections");
+        adapter.addFragment(new Plans(),"Plans");
+        viewPager.setAdapter(adapter);
 
     }
+
 }

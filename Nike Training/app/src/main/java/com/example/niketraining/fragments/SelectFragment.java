@@ -13,8 +13,14 @@ import android.widget.ImageView;
 import com.example.niketraining.R;
 
 public class SelectFragment extends Fragment {
+    public static final String TAG = SelectFragment.class.getSimpleName();
 
     ImageView imageView;
+
+    public static SelectFragment newInstance() {
+        SelectFragment fragment = new SelectFragment();
+        return fragment;
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

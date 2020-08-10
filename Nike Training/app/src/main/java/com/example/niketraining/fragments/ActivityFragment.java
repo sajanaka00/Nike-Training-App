@@ -25,7 +25,6 @@ public class ActivityFragment extends Fragment {
     private ViewPager viewPager;
 
     ImageView imageView;
-    RelativeLayout relativeLayout;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -36,10 +35,7 @@ public class ActivityFragment extends Fragment {
         tabLayout = (TabLayout) view.findViewById(R.id.tabLayout);
         adapter = new TabAdapter(getActivity().getSupportFragmentManager());
 
-        adapter.addFragment(new History(), "History");
-        adapter.addFragment(new Achievements(), "Achievements");
-
-        viewPager.setAdapter(adapter);
+        setupViewPager(viewPager);
         tabLayout.setupWithViewPager(viewPager);
 
         imageView = view.findViewById(R.id.add);
@@ -52,16 +48,14 @@ public class ActivityFragment extends Fragment {
             }
         });
 
-        relativeLayout = view.findViewById(R.id.ntcLabel);
-        relativeLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                FragmentTransaction fragmentTransaction = getChildFragmentManager().beginTransaction();
-                fragmentTransaction.replace(R.id.fragmentContainerActivity, new SelectFragment());
-                fragmentTransaction.commit();
-            }
-        });
-
         return view;
+    }
+
+    private void setupViewPager(ViewPager viewPager) {
+        TabAdapter adapter = new TabAdapter(getChildFragmentManager());
+        adapter.addFragment(new History(), "History");
+        adapter.addFragment(new Achievements(), "Achievements");
+        viewPager.setAdapter(adapter);
+
     }
 }

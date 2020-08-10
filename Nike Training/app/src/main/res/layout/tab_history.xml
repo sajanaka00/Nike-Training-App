@@ -58,7 +58,7 @@
                 android:background="@drawable/line"/>
 
             <RelativeLayout
-                android:id="@+id/ntcLabel"
+                android:id="@+id/ntcLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/horLine"
@@ -92,7 +92,7 @@
                 android:id="@+id/horLine2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/ntcLabel"
+                android:layout_below="@+id/ntcLayout"
                 android:background="@drawable/line"/>
 
             <TextView
