@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/relativeLayoutF"
+    android:id="@+id/relativeLayoutForYou"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:background="@drawable/border">
 
     <ImageView
-        android:id="@+id/imageF"
+        android:id="@+id/imageForYou"
         android:layout_width="225dp"
         android:layout_height="250dp"
         android:layout_marginStart="15dp"
@@ -24,7 +24,7 @@
         android:orientation="vertical" >
 
         <TextView
-            android:id="@+id/titleF"
+            android:id="@+id/titleForYou"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="18sp"
@@ -33,7 +33,7 @@
             android:fontFamily="@font/ptsans_regular" />
 
         <TextView
-            android:id="@+id/descriptionF"
+            android:id="@+id/descriptionForYou"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"

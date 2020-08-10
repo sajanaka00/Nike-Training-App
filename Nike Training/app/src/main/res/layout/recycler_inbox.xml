@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/relativeLayoutI"
+    android:id="@+id/relativeLayoutInbox"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
     <RelativeLayout
-        android:id="@+id/contentI"
+        android:id="@+id/contentInbox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -29,27 +29,25 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/titleI"
+                android:id="@+id/titleInbox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:textStyle="bold"
+                android:textSize="16sp"
                 android:textColor="@color/black"
-                android:fontFamily="@font/ptsans_regular" />
+                android:fontFamily="@font/archivo_narrow_regular" />
 
             <TextView
-                android:id="@+id/descriptionI"
+                android:id="@+id/descriptionInbox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/titleI"
-                android:layout_marginTop="1dp"
+                android:layout_below="@+id/titleInbox"
                 android:textSize="14sp" />
 
             <TextView
-                android:id="@+id/descriptionI_2"
+                android:id="@+id/descriptionInbox2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/descriptionI"
+                android:layout_below="@+id/descriptionInbox"
                 android:layout_marginTop="1dp"
                 android:textSize="14sp" />
 
@@ -69,7 +67,7 @@
         android:id="@+id/horLine"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/contentI"
+        android:layout_below="@+id/contentInbox"
         android:background="@drawable/line"/>
 
 </RelativeLayout>

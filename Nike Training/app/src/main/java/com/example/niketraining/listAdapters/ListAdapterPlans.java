@@ -60,9 +60,9 @@ public class ListAdapterPlans extends RecyclerView.Adapter<ListAdapterPlans.View
 
         public ViewHolder(View itemView) {
             super(itemView);
-            this.image = (ImageView) itemView.findViewById(R.id.imageP);
-            this.title = (TextView) itemView.findViewById(R.id.titleP);
-            this.description = (TextView) itemView.findViewById(R.id.descriptionP);
+            this.image = (ImageView) itemView.findViewById(R.id.imagePlans);
+            this.title = (TextView) itemView.findViewById(R.id.titlePlans);
+            this.description = (TextView) itemView.findViewById(R.id.descriptionPlans);
             relativeLayout = (RelativeLayout) itemView.findViewById(R.id.relativeLayoutP);
         }
     }

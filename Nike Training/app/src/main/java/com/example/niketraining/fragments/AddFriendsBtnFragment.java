@@ -2,7 +2,6 @@ package com.example.niketraining.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -15,10 +14,9 @@ import com.example.niketraining.R;
 import com.example.niketraining.TabAdapter;
 import com.example.niketraining.tabLayouts.Contacts;
 import com.example.niketraining.tabLayouts.Suggestions;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.tabs.TabLayout;
 
-public class AddFriendsFragment extends Fragment {
+public class AddFriendsBtnFragment extends Fragment {
 
     private TabAdapter adapter;
     private TabLayout tabLayout;
@@ -29,7 +27,7 @@ public class AddFriendsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_add_friends, container, false);
+        View view = inflater.inflate(R.layout.fragment_add_friends_btn, container, false);
 
         viewPager = (ViewPager) view.findViewById(R.id.viewPager);
         tabLayout = (TabLayout) view.findViewById(R.id.tabLayout);

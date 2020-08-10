@@ -25,10 +25,9 @@
             android:layout_height="wrap_content"
             android:layout_toEndOf="@+id/imageContacts"
             android:layout_marginStart="20dp"
-            android:textSize="16sp"
+            android:textSize="15sp"
             android:textColor="@color/black"
-            android:layout_centerVertical="true"
-            android:fontFamily="@font/ptsans_regular" />
+            android:layout_centerVertical="true" />
 
         <ImageView
             android:id="@+id/addContact"

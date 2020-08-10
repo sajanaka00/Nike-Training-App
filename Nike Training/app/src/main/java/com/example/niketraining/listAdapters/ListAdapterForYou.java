@@ -60,10 +60,10 @@ public class ListAdapterForYou extends RecyclerView.Adapter<ListAdapterForYou.Vi
 
         public ViewHolder(View itemView) {
             super(itemView);
-            this.image = (ImageView) itemView.findViewById(R.id.imageF);
-            this.title = (TextView) itemView.findViewById(R.id.titleF);
-            this.description = (TextView) itemView.findViewById(R.id.descriptionF);
-            relativeLayout = (RelativeLayout) itemView.findViewById(R.id.relativeLayoutF);
+            this.image = (ImageView) itemView.findViewById(R.id.imageForYou);
+            this.title = (TextView) itemView.findViewById(R.id.titleForYou);
+            this.description = (TextView) itemView.findViewById(R.id.descriptionForYou);
+            relativeLayout = (RelativeLayout) itemView.findViewById(R.id.relativeLayoutForYou);
         }
     }
 }

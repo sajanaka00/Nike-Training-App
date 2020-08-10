@@ -26,7 +26,7 @@ public class FeedFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-                fragmentTransaction.replace(R.id.fragmentContainerFeed, new AddFriendsFragment());
+                fragmentTransaction.replace(R.id.fragmentContainerFeed, new AddFriendsBtnFragment());
                 fragmentTransaction.commit();
             }
         });

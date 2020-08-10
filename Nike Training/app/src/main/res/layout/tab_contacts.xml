@@ -24,7 +24,7 @@
                 android:textSize="13sp"
                 android:textStyle="bold"
                 android:textColor="@color/black"
-                android:fontFamily="@font/archivo_narrow_regular"/>
+                android:fontFamily="@font/ptsans_regular"/>
 
             <RelativeLayout
                 android:id="@+id/recyclerViewContact"
@@ -58,7 +58,7 @@
                 android:textSize="13sp"
                 android:textStyle="bold"
                 android:textColor="@color/black"
-                android:fontFamily="@font/archivo_narrow_regular" />
+                android:fontFamily="@font/ptsans_regular" />
 
             <RelativeLayout
                 android:layout_width="match_parent"

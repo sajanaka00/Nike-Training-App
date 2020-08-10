@@ -60,10 +60,10 @@ public class ListAdapterHistory extends RecyclerView.Adapter<ListAdapterHistory.
 
         public ViewHolder(View itemView) {
             super(itemView);
-            this.image = (ImageView) itemView.findViewById(R.id.imageH);
-            this.title = (TextView) itemView.findViewById(R.id.titleH);
-            this.description = (TextView) itemView.findViewById(R.id.descriptionH);
-            relativeLayout = (RelativeLayout)itemView.findViewById(R.id.relativeLayoutH);
+            this.image = (ImageView) itemView.findViewById(R.id.imageHistory);
+            this.title = (TextView) itemView.findViewById(R.id.titleHistory);
+            this.description = (TextView) itemView.findViewById(R.id.descriptionHistory);
+            relativeLayout = (RelativeLayout)itemView.findViewById(R.id.relativeLayoutHistory);
         }
     }
 }

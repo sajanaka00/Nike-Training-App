@@ -1,5 +1,6 @@
 package com.example.niketraining.fragments;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -8,6 +9,8 @@ import androidx.viewpager.widget.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.niketraining.R;
 import com.example.niketraining.TabAdapter;
@@ -25,6 +28,9 @@ public class WorkoutFragment extends Fragment {
     private TabLayout tabLayout;
     private ViewPager viewPager;
 
+    TextView textView;
+    Typeface font;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
@@ -41,6 +47,10 @@ public class WorkoutFragment extends Fragment {
 
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
+
+        textView = view.findViewById(R.id.bookmark);
+        font = Typeface.createFromAsset(getAssets(), "fonts/fontawesome-webfont.ttf");
+        textView.setTypeface(font);
 
         return view;
 

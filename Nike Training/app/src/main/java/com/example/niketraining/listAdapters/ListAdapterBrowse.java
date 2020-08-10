@@ -57,9 +57,9 @@ public class ListAdapterBrowse extends RecyclerView.Adapter<ListAdapterBrowse.Vi
 
         public ViewHolder(View itemView) {
             super(itemView);
-            this.image = (ImageView) itemView.findViewById(R.id.imageB);
-            this.title = (TextView) itemView.findViewById(R.id.titleB);
-            relativeLayout = (RelativeLayout)itemView.findViewById(R.id.relativeLayoutB);
+            this.image = (ImageView) itemView.findViewById(R.id.imageBrowse);
+            this.title = (TextView) itemView.findViewById(R.id.titleBrowse);
+            relativeLayout = (RelativeLayout)itemView.findViewById(R.id.relativeLayoutBrowse);
         }
     }
 }

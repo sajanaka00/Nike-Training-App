@@ -4,15 +4,12 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.niketraining.R;
-import com.example.niketraining.fragments.QuickQuarterFragment;
 import com.example.niketraining.listAdapters.ListAdapterForYou;
 import com.example.niketraining.listData.ListData_1imgView_2textViews;
 
@@ -73,7 +70,7 @@ public class ForYou extends Fragment {
 //            @Override
 //            public void onClick(View v) {
 //                FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-//                fragmentTransaction.replace(R.id.fragmentContainerQuickQuarter, new QuickQuarterFragment());
+//                fragmentTransaction.replace(R.id.fragmentContainerQuickQuarter, new WorkoutImg1Fragment());
 //                fragmentTransaction.commit();
 //            }
 //        });

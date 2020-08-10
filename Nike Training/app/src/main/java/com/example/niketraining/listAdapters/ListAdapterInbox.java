@@ -58,10 +58,10 @@ public class ListAdapterInbox extends RecyclerView.Adapter<ListAdapterInbox.View
 
         public ViewHolder(View itemView) {
             super(itemView);
-            this.title = (TextView) itemView.findViewById(R.id.titleI);
-            this.description = (TextView) itemView.findViewById(R.id.descriptionI);
-            this.description2 = (TextView) itemView.findViewById(R.id.descriptionI_2);
-            relativeLayout = (RelativeLayout) itemView.findViewById(R.id.relativeLayoutI);
+            this.title = (TextView) itemView.findViewById(R.id.titleInbox);
+            this.description = (TextView) itemView.findViewById(R.id.descriptionInbox);
+            this.description2 = (TextView) itemView.findViewById(R.id.descriptionInbox2);
+            relativeLayout = (RelativeLayout) itemView.findViewById(R.id.relativeLayoutInbox);
         }
     }
 }

@@ -29,9 +29,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
-                android:textSize="16sp"
-                android:textColor="@color/black"
-                android:fontFamily="@font/ptsans_regular" />
+                android:textSize="15sp"
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/descriptionContacts2"

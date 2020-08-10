@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/relativeLayoutB"
+    android:id="@+id/relativeLayoutBrowse"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/border">
 
     <ImageView
-        android:id="@+id/imageB"
+        android:id="@+id/imageBrowse"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_alignParentStart="true"
@@ -16,7 +16,7 @@
         android:paddingBottom="1dp"/>
 
     <TextView
-        android:id="@+id/titleB"
+        android:id="@+id/titleBrowse"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
