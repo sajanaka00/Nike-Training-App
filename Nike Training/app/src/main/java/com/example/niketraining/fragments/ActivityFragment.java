@@ -1,16 +1,14 @@
 package com.example.niketraining.fragments;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
-import androidx.viewpager.widget.ViewPager;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
+
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.viewpager.widget.ViewPager;
 
 import com.example.niketraining.R;
 import com.example.niketraining.TabAdapter;
@@ -53,9 +51,10 @@ public class ActivityFragment extends Fragment {
 
     private void setupViewPager(ViewPager viewPager) {
         TabAdapter adapter = new TabAdapter(getChildFragmentManager());
+
         adapter.addFragment(new History(), "History");
         adapter.addFragment(new Achievements(), "Achievements");
-        viewPager.setAdapter(adapter);
 
+        viewPager.setAdapter(adapter);
     }
 }

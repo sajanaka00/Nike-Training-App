@@ -50,7 +50,7 @@
                 android:layout_alignParentEnd="true"
                 android:layout_centerInParent="true"
                 android:layout_marginEnd="20dp"
-                android:background="@drawable/vector_bookmark"/>
+                android:background="@drawable/vector_search"/>
 
         </RelativeLayout>
 
@@ -64,6 +64,13 @@
                 android:layout_height="500dp"
                 android:background="@drawable/for_you_1"
                 android:scaleType="fitXY"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hi"
+                android:textColor="@color/white"
+                android:layout_centerVertical="true"/>
 
         </RelativeLayout>
 

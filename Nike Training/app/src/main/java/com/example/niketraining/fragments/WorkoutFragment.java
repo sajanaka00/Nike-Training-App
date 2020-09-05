@@ -1,28 +1,22 @@
 package com.example.niketraining.fragments;
 
-import android.graphics.Typeface;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-import androidx.viewpager.widget.ViewPager;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.TextView;
+
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.viewpager.widget.ViewPager;
 
 import com.example.niketraining.R;
 import com.example.niketraining.TabAdapter;
-import com.example.niketraining.tabLayouts.Achievements;
-import com.example.niketraining.tabLayouts.History;
-import com.google.android.material.tabs.TabLayout;
-
 import com.example.niketraining.tabLayouts.Browse;
 import com.example.niketraining.tabLayouts.Collections;
 import com.example.niketraining.tabLayouts.ForYou;
 import com.example.niketraining.tabLayouts.Plans;
-
+import com.google.android.material.tabs.TabLayout;
 
 public class WorkoutFragment extends Fragment {
 
@@ -30,8 +24,7 @@ public class WorkoutFragment extends Fragment {
     private TabLayout tabLayout;
     private ViewPager viewPager;
 
-    TextView textView;
-    Typeface font;
+    ImageView imageView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -45,23 +38,27 @@ public class WorkoutFragment extends Fragment {
         setupViewPager(viewPager);
         tabLayout.setupWithViewPager(viewPager);
 
-        textView = view.findViewById(R.id.bookmark);
-        font = Typeface.createFromAsset(getActivity().getAssets(), "fontawesome-webfont.ttf");
-
-        textView.setTypeface(font);
+        imageView = view.findViewById(R.id.bookmark);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentTransaction fragmentTransaction = getChildFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.fragmentContainerWorkout, new SavedWorkoutsFragment());
+                fragmentTransaction.commit();
+            }
+        });
 
         return view;
-
     }
 
     private void setupViewPager(ViewPager viewPager) {
         TabAdapter adapter = new TabAdapter(getChildFragmentManager());
+
         adapter.addFragment(new ForYou(), "For You");
         adapter.addFragment(new Browse(), "Browse");
         adapter.addFragment(new Collections(),"Collections");
         adapter.addFragment(new Plans(),"Plans");
+
         viewPager.setAdapter(adapter);
-
     }
-
 }

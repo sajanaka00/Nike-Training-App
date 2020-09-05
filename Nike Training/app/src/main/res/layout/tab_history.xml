@@ -78,13 +78,13 @@
                     tools:ignore="RtlHardcoded" />
 
                 <ImageView
-                    android:id="@+id/doubleLine"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:id="@+id/exchange"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:layout_alignParentEnd="true"
                     android:layout_centerInParent="true"
-                    android:layout_marginEnd="15dp"
-                    android:background="@drawable/vector_double_line" />
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/vector_exchange" />
 
             </RelativeLayout>
 
