@@ -25,7 +25,7 @@ public class ForYou extends Fragment {
 
 //    ImageView imageView;
 
-    //recyclerView 1
+    // recyclerView 1
     ListData_1imgView_2textViews[] listData3 = new ListData_1imgView_2textViews[] {
             new ListData_1imgView_2textViews("Go, Rest, Repeat","30 min, Beginner",R.drawable.for_you_1),
             new ListData_1imgView_2textViews("Quick-Hit Abs","15 min, Intermediate",R.drawable.for_you_2),
@@ -34,7 +34,7 @@ public class ForYou extends Fragment {
             new ListData_1imgView_2textViews("The Quick Quarter","15 min, Intermediate",R.drawable.for_you_5),
     };
 
-    //recyclerView 2
+    // recyclerView 2
     ListData_1imgView_2textViews[] listData3_2 = new ListData_1imgView_2textViews[] {
             new ListData_1imgView_2textViews("Athlete Agility","29 min, Intermediate",R.drawable.for_you_6),
             new ListData_1imgView_2textViews("Wake-Up Warm-Up","11 min, Beginner",R.drawable.for_you_7),
@@ -53,13 +53,13 @@ public class ForYou extends Fragment {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.tab_for_you, container, false);
 
-        //recyclerView 1
+        // recyclerView 1
         recyclerView = view.findViewById(R.id.recyclerViewF);
         adapter = new ListAdapterForYou(listData3);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
         recyclerView.setAdapter(adapter);
 
-        //recyclerView 2
+        // recyclerView 2
         recyclerView2 = view.findViewById(R.id.recyclerViewF2);
         adapter2 = new ListAdapterForYou(listData3_2);
         recyclerView2.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
@@ -70,7 +70,7 @@ public class ForYou extends Fragment {
 //            @Override
 //            public void onClick(View v) {
 //                FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-//                fragmentTransaction.replace(R.id.fragmentContainerQuickQuarter, new WorkoutImg1Fragment());
+//                fragmentTransaction.replace(R.id.fragmentContainerQuickQuarter, new ForYouImg1Fragment());
 //                fragmentTransaction.commit();
 //            }
 //        });

@@ -5,4 +5,6 @@
     <string name="contentLight_plan">Start training with a personal plan that guides you whilst adjusting to your progress, schedule and other activities.</string>
     <string name="contentLight_saved_workout">Start saving your top workouts for quick access, any time.</string>
     <string name="contentLight_suggested">Add friends from your contacts or search so we can make suggestions for you.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
