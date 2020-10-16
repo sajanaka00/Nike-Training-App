@@ -14,18 +14,16 @@ import com.example.niketraining.listAdapters.ListAdapterPlans;
 import com.example.niketraining.listData.ListData_1imgView_2textViews;
 import com.example.niketraining.R;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Plans extends Fragment {
 
     private RecyclerView recyclerView;
     private ListAdapterPlans adapter;
     private View view;
 
-    ListData_1imgView_2textViews[] listData3 = new ListData_1imgView_2textViews[] {
-            new ListData_1imgView_2textViews("START UP", "Kick it off with four weeks of guided, well-balanced workouts to get you fit.", R.drawable.plan_1),
-            new ListData_1imgView_2textViews("LEAN FIT", "Get lean and fit over six weeks with a balanced plan that builds endurance.", R.drawable.plan_2),
-            new ListData_1imgView_2textViews("BODYWEIGHT ONLY", "Push your strength and improve muscle tone over four weeks-all without weights.", R.drawable.plan_3),
-            new ListData_1imgView_2textViews("GYM STRONG", "Build full-body strength with a focus on weight training over 8 weeks.", R.drawable.plan_4),
-    };
+    List<ListData_1imgView_2textViews> listData3;
 
     @Override
     public void onResume() {
@@ -37,11 +35,36 @@ public class Plans extends Fragment {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.tab_plans, container, false);
 
+        setData();
         recyclerView = view.findViewById(R.id.recyclerViewP);
-        adapter = new ListAdapterPlans(listData3);
+//        adapter = new ListAdapterPlans(listData3);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(adapter);
 
         return view;
+    }
+
+    private void setData(){
+        listData3 = new ArrayList<>();
+
+        ListData_1imgView_2textViews object = new ListData_1imgView_2textViews();
+        object.setImgId(R.drawable.plan_1);
+        object.setDescription("Kick it off with four weeks of guided, well-balanced workouts to get you fit.");
+        object.setTitle("Claudia Brook");
+
+        ListData_1imgView_2textViews object1 = new ListData_1imgView_2textViews();
+        object1.setImgId(R.drawable.plan_2);
+        object1.setDescription("Get lean and fit over six weeks with a balanced plan that builds endurance");
+        object1.setTitle("Claudia Brook");
+
+        ListData_1imgView_2textViews object2 = new ListData_1imgView_2textViews();
+        object2.setImgId(R.drawable.plan_3);
+        object2.setDescription("Push your strength and improve muscle tone over four weeks-all without weights.");
+        object2.setTitle("Claudia Brook");
+
+        listData3.add(object);
+        listData3.add(object1);
+        listData3.add(object2);
+
     }
 }

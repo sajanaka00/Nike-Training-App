@@ -12,6 +12,9 @@ public class ListData_1imgView_2textViews {
         this.imgId = imgId;
     }
 
+    public ListData_1imgView_2textViews() {
+
+    }
     public int getImgId() {
         return imgId;
     }

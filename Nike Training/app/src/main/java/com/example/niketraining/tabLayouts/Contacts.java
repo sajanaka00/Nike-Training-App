@@ -15,6 +15,9 @@ import com.example.niketraining.listAdapters.ListAdapterContacts2;
 import com.example.niketraining.listData.ListData_1imgView_2textViews;
 import com.example.niketraining.listData.ListData_2imgViews_1textView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Contacts extends Fragment {
 
     private RecyclerView recyclerView;
@@ -30,11 +33,7 @@ public class Contacts extends Fragment {
             new ListData_2imgViews_1textView(R.drawable.user_img, "Kelly Rowena", R.drawable.vector_add),
     };
 
-    ListData_1imgView_2textViews[] listData_1imgView_2textViews = new ListData_1imgView_2textViews[] {
-            new ListData_1imgView_2textViews("Claudia Brook", "claudia@gmail.com", R.drawable.user_img),
-            new ListData_1imgView_2textViews("Claudia Brook", "claudia123@gmail.com", R.drawable.user_img),
-            new ListData_1imgView_2textViews("Jane Mclean", "janemc@yahoo.com", R.drawable.user_img),
-    };
+    List<ListData_1imgView_2textViews> listData_1imgView_2textViews;
 
     @Override
     public void onResume() {
@@ -45,7 +44,7 @@ public class Contacts extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.tab_contacts, container, false);
-
+        setData();
         recyclerView = view.findViewById(R.id.recyclerViewContacts);
         adapter = new ListAdapterContacts(listData_2imgViews_1textViews);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
@@ -57,5 +56,29 @@ public class Contacts extends Fragment {
         recyclerView2.setAdapter(adapter2);
 
         return view;
+    }
+
+    private void setData(){
+        listData_1imgView_2textViews = new ArrayList<>();
+
+        ListData_1imgView_2textViews object = new ListData_1imgView_2textViews();
+        object.setImgId(R.drawable.user_img);
+        object.setDescription("claudia123@gmail.com");
+        object.setTitle("Claudia Brook");
+
+        ListData_1imgView_2textViews object1 = new ListData_1imgView_2textViews();
+        object1.setImgId(R.drawable.user_img);
+        object1.setDescription("claudia123@gmail.com");
+        object1.setTitle("Claudia Brook");
+
+        ListData_1imgView_2textViews object2 = new ListData_1imgView_2textViews();
+        object2.setImgId(R.drawable.user_img);
+        object2.setDescription("claudia123@gmail.com");
+        object2.setTitle("Claudia Brook");
+
+        listData_1imgView_2textViews.add(object);
+        listData_1imgView_2textViews.add(object1);
+        listData_1imgView_2textViews.add(object2);
+
     }
 }

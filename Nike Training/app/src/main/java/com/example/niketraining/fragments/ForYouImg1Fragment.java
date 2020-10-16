@@ -14,6 +14,7 @@ import com.example.niketraining.R;
 import com.example.niketraining.tabLayouts.ForYou;
 
 public class ForYouImg1Fragment extends Fragment {
+    public static final String TAG = ForYouImg1Fragment.class.getSimpleName();
 
     ImageView imageView;
 

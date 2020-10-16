@@ -24,9 +24,9 @@ public class History extends Fragment implements View.OnClickListener {
     private View view;
     private RelativeLayout ntcLayout;
 
-    ListData_1imgView_2textViews[] listDatum3args = new ListData_1imgView_2textViews[] {
-            new ListData_1imgView_2textViews("Runner Cool Down", "Fri, 19 Apr \t  1:15", R.drawable.history),
-    };
+//    ListData_1imgView_2textViews[] listDatum3args = new ListData_1imgView_2textViews[] {
+//            new ListData_1imgView_2textViews("Runner Cool Down", "Fri, 19 Apr \t  1:15", R.drawable.history),
+//    };
 
     @Override
     public void onResume() {
@@ -40,7 +40,7 @@ public class History extends Fragment implements View.OnClickListener {
         ntcLayout = view.findViewById(R.id.ntcLayout);
 
         recyclerView = view.findViewById(R.id.recyclerViewH);
-        adapter = new ListAdapterHistory(listDatum3args);
+//        adapter = new ListAdapterHistory(listDatum3args);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(adapter);
 

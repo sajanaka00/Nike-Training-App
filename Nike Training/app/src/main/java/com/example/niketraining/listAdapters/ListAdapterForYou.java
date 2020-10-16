@@ -1,5 +1,6 @@
 package com.example.niketraining.listAdapters;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,15 +12,22 @@ import android.widget.Toast;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.niketraining.R;
+import com.example.niketraining.callback.GridItemClickListener;
+import com.example.niketraining.listData.ListData_1imgView_1textView;
 import com.example.niketraining.listData.ListData_1imgView_2textViews;
+
+import java.util.List;
 
 public class ListAdapterForYou extends RecyclerView.Adapter<ListAdapterForYou.ViewHolder> {
 
-    private ListData_1imgView_2textViews[] listdata;
+    private List<ListData_1imgView_2textViews> listdata;
+    private GridItemClickListener gridItemClickListener;
+    Context context;
 
-    // RecyclerView recyclerView;
-    public ListAdapterForYou(ListData_1imgView_2textViews[] listdata) {
+    public ListAdapterForYou(List<ListData_1imgView_2textViews> listdata,GridItemClickListener gridItemClickListener,Context context) {
         this.listdata = listdata;
+        this.gridItemClickListener = gridItemClickListener;
+        this.context = context;
     }
 
     @Override
@@ -33,26 +41,25 @@ public class ListAdapterForYou extends RecyclerView.Adapter<ListAdapterForYou.Vi
 
     @Override
     public void onBindViewHolder(ListAdapterForYou.ViewHolder holder, int position) {
-        final ListData_1imgView_2textViews myListData3args = listdata[position];
-        holder.title.setText(listdata[position].getTitle());
-        holder.description.setText(listdata[position].getDescription());
+        final ListData_1imgView_2textViews list = listdata.get(position);
+        holder.title.setText(listdata.get(position).getTitle());
+        holder.description.setText(listdata.get(position).getDescription());
+        holder.image.setImageResource(listdata.get(position).getImgId());
 
-        holder.image.setImageResource(listdata[position].getImgId());
-
-        holder.relativeLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(view.getContext(),"Clicked on item: " + myListData3args.getTitle(),Toast.LENGTH_LONG).show();
-            }
-        });
+//        holder.relativeLayout.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Toast.makeText(view.getContext(),"Clicked on item: " + list.getDescription(),Toast.LENGTH_LONG).show();
+//            }
+//        });
     }
 
     @Override
     public int getItemCount() {
-        return listdata.length;
+        return listdata.size();
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         public ImageView image;
         public TextView title;
         public TextView description;
@@ -64,6 +71,20 @@ public class ListAdapterForYou extends RecyclerView.Adapter<ListAdapterForYou.Vi
             this.title = (TextView) itemView.findViewById(R.id.titleForYou);
             this.description = (TextView) itemView.findViewById(R.id.descriptionForYou);
             relativeLayout = (RelativeLayout) itemView.findViewById(R.id.relativeLayoutForYou);
+            relativeLayout.setOnClickListener(this);
+
+        }
+
+        @Override
+        public void onClick(View v) {
+
+            int position = getAdapterPosition();
+            ListData_1imgView_2textViews model = listdata.get(position);
+            gridItemClickListener.onItemClick(model);
+
+            if (model != null) {
+                gridItemClickListener.onItemClick(model);
+            }
         }
     }
 }

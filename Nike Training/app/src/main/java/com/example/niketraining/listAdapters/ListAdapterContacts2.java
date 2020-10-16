@@ -13,12 +13,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.niketraining.R;
 import com.example.niketraining.listData.ListData_1imgView_2textViews;
 
+import java.util.List;
+
 public class ListAdapterContacts2 extends RecyclerView.Adapter<ListAdapterContacts2.ViewHolder>{
 
-    private ListData_1imgView_2textViews[] listdata;
+    private List<ListData_1imgView_2textViews> listdata;
 
     // RecyclerView recyclerView;
-    public ListAdapterContacts2(ListData_1imgView_2textViews[] listdata) {
+    public ListAdapterContacts2(List<ListData_1imgView_2textViews> listdata) {
         this.listdata = listdata;
     }
 
@@ -33,11 +35,11 @@ public class ListAdapterContacts2 extends RecyclerView.Adapter<ListAdapterContac
 
     @Override
     public void onBindViewHolder(ListAdapterContacts2.ViewHolder holder, int position) {
-        final ListData_1imgView_2textViews myListData3args = listdata[position];
+        final ListData_1imgView_2textViews myListData3args = listdata.get(position);
 
-        holder.image.setImageResource(listdata[position].getImgId());
-        holder.title.setText(listdata[position].getTitle());
-        holder.description.setText(listdata[position].getDescription());
+        holder.image.setImageResource(listdata.get(position).getImgId());
+        holder.title.setText(listdata.get(position).getTitle());
+        holder.description.setText(listdata.get(position).getDescription());
 
         holder.relativeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,7 +51,7 @@ public class ListAdapterContacts2 extends RecyclerView.Adapter<ListAdapterContac
 
     @Override
     public int getItemCount() {
-        return listdata.length;
+        return listdata.size();
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
