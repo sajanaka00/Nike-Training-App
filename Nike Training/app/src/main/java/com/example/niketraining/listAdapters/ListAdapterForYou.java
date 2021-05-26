@@ -7,13 +7,11 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.niketraining.R;
 import com.example.niketraining.callback.GridItemClickListener;
-import com.example.niketraining.listData.ListData_1imgView_1textView;
 import com.example.niketraining.listData.ListData_1imgView_2textViews;
 
 import java.util.List;
@@ -72,12 +70,10 @@ public class ListAdapterForYou extends RecyclerView.Adapter<ListAdapterForYou.Vi
             this.description = (TextView) itemView.findViewById(R.id.descriptionForYou);
             relativeLayout = (RelativeLayout) itemView.findViewById(R.id.relativeLayoutForYou);
             relativeLayout.setOnClickListener(this);
-
         }
 
         @Override
         public void onClick(View v) {
-
             int position = getAdapterPosition();
             ListData_1imgView_2textViews model = listdata.get(position);
             gridItemClickListener.onItemClick(model);

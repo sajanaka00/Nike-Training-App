@@ -44,7 +44,6 @@ public class ForYou extends Fragment implements GridItemClickListener {
         view = inflater.inflate(R.layout.tab_for_you, container, false);
         setData();
 
-
 //        imageView = view.findViewById(R.id.for_you_1);
 //        imageView.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -60,14 +59,12 @@ public class ForYou extends Fragment implements GridItemClickListener {
 
     @Override
     public void onItemClick(Object object) {
-
         Fragment fragment = new ForYouImg1Fragment();
         FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.addToBackStack(ForYouImg1Fragment.TAG);
         fragmentTransaction.replace(R.id.fragmentContainerWorkout, fragment, ForYouImg1Fragment.TAG);
         fragmentTransaction.commit();
-
     }
 
     private void setData(){
@@ -75,44 +72,54 @@ public class ForYou extends Fragment implements GridItemClickListener {
         List<ListData_1imgView_2textViews> newWorkout = new ArrayList<>();
 
         ListData_1imgView_2textViews object1 = new ListData_1imgView_2textViews();
-        object1.setDescription("Go, Rest, Repeat,30 min, Beginner");
+        object1.setTitle("Go, Rest, Repeat");
+        object1.setDescription("30 min, Beginner");
         object1.setImgId(R.drawable.for_you_1);
 
         ListData_1imgView_2textViews object2 = new ListData_1imgView_2textViews();
-        object2.setDescription("Quick-Hit Abs,15 min, Intermediate");
+        object2.setTitle("Quick-Hit Abs");
+        object2.setDescription("15 min, Intermediate");
         object2.setImgId(R.drawable.for_you_2);
 
         ListData_1imgView_2textViews object3 = new ListData_1imgView_2textViews();
-        object3.setDescription("Extend Your Range,15 min, Beginner");
+        object3.setTitle("Extend Your Range");
+        object3.setDescription("15 min, Beginner");
         object3.setImgId(R.drawable.for_you_3);
 
         ListData_1imgView_2textViews object4 = new ListData_1imgView_2textViews();
-        object4.setDescription("Essential Strength Yoga,23 min, Beginner");
+        object4.setTitle("Essential Strength Yoga");
+        object4.setDescription("23 min, Beginner");
         object4.setImgId(R.drawable.for_you_4);
 
         ListData_1imgView_2textViews object5 = new ListData_1imgView_2textViews();
-        object5.setDescription("he Quick Quarter,15 min, Intermediate");
+        object5.setTitle("The Quick Quarter");
+        object5.setDescription("15 min, Intermediate");
         object5.setImgId(R.drawable.for_you_5);
 
 
         ListData_1imgView_2textViews object6 = new ListData_1imgView_2textViews();
-        object6.setDescription("Go, Rest, Repeat,30 min, Beginner");
+        object6.setTitle("Go, Rest, Repeat");
+        object6.setDescription("30 min, Beginner");
         object6.setImgId(R.drawable.for_you_6);
 
         ListData_1imgView_2textViews object7 = new ListData_1imgView_2textViews();
-        object7.setDescription("Quick-Hit Abs,15 min, Intermediate");
+        object7.setTitle("Quick-Hit Abs");
+        object7.setDescription("15 min, Intermediate");
         object7.setImgId(R.drawable.for_you_7);
 
         ListData_1imgView_2textViews object8 = new ListData_1imgView_2textViews();
-        object8.setDescription("Extend Your Range,15 min, Beginner");
+        object8.setTitle("Extend Your Range");
+        object8.setDescription("15 min, Beginner");
         object8.setImgId(R.drawable.for_you_8);
 
         ListData_1imgView_2textViews object9 = new ListData_1imgView_2textViews();
-        object9.setDescription("Essential Strength Yoga,23 min, Beginner");
+        object9.setTitle("Essential Strength Yoga");
+        object9.setDescription("23 min, Beginner");
         object9.setImgId(R.drawable.for_you_9);
 
         ListData_1imgView_2textViews object10 = new ListData_1imgView_2textViews();
-        object10.setDescription("he Quick Quarter,15 min, Intermediate");
+        object10.setTitle("The Quick Quarter");
+        object10.setDescription("15 min, Intermediate");
         object10.setImgId(R.drawable.for_you_10);
 
         pickForYou.add(object1);
@@ -126,6 +133,7 @@ public class ForYou extends Fragment implements GridItemClickListener {
         newWorkout.add(object8);
         newWorkout.add(object9);
         newWorkout.add(object10);
+
         // recyclerView 1
         recyclerView = view.findViewById(R.id.recyclerViewF);
         adapter = new ListAdapterForYou(pickForYou, ForYou.this,getActivity());
